@@ -1,3 +1,5 @@
+src/Output
+
 *.state
 *.pickle
 *.dcm

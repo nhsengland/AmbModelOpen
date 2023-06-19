@@ -1,33 +1,16 @@
-# Model Card: {PROJECT NAME}
+# Model Card: {Amb-Model-Open}
 
 
 ## Model Details
 
-The implementation of the {PROJECT NAME} within this repository was created as part of an NHS England PhD internship project undertaken by {PROJECT AUTHOR} {LINK TO LAST COMMIT WITH ABBREVIATED SHA}. This model card describes the updated version of the model, released {DATE OF RELEASE}.
+The implementation of the Amb-Model-Open within this repository is the public facing version realting to a piece of work conducted in NHS England from Feb-May 2023. This model card describes the updated version of the model, released 20-June-2023.  The model itself is a discrete event simulation using a trajectory to define possible routes.
 
 ## Model Use
 
 ### Intended Use
 
-This model is intended for use in {BRIEF DESCRIPTION OF USE}
-
+This model is intended to be used to generate evidence for understanding the dynamics in the ambulance job cycle.   The intended use requires the model inputs and parameters to be calibrated for a specific ambulance trust and the results to be validated alongside expert opinion.
 
 ### Out-of-Scope Use Cases
 
-This model is not suitable to provide privacy guarantees in a production environment.
-
-{DETAIL KNOWN CASES WHERE PRIVACY IS NOT GUARENTEED}
-
-## Training Data
-
-Experiments in this repository are run against: 
-
-{LIST AND LINK DATA SOURCES}
-
-## Performance and Limitations
-
-{DETAIL PERFORMANCE EXPECTATIONS and LIMITATIONS}
-
-## Additional notes
-
-{DETAIL SUPPLEMENTARY INFORMATION}
+This model is a simple representation of the ambulance / ED interaction.   Currently no escalation or human behaviour characteristics are included in the model.  Without these formal and informal mitigation dynamics, the model is overly sensitive and shows an explosive nature when resources become depleted.   Therefore, the results from this model should be used as an indication to inform the narrative and not used for performance monitoring or to be used in isolation for planning purposes.
