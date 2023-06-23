@@ -1,5 +1,5 @@
 # Amb-Model-Open
-## NHS England Digitial Analytics and Research Team (DART)
+## NHS England Digital Analytics and Research Team (DART)
 
 ### About the Project
 
