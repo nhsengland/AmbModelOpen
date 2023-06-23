@@ -913,3 +913,4 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/vim,venv,pydev,linux,macos,flask,dotenv,django,direnv,python,windows,virtualenv,pycharm+all,visualstudio,jupyternotebooks,visualstudiocode,data
 
 .xls*
+.Rproj.user

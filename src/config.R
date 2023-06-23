@@ -9,7 +9,7 @@
 ############################################################################# ##
 
 # Batch run parameters --------------------------------------------------------
-nreps = 25                              # number of replications
+nreps = 10                              # number of replications
 
 # Globals --------------------------------------------------------
 n_days_week <- 7                       # days in a week. constant
@@ -42,14 +42,14 @@ n_mobile0 <- min(floor(n_ru0/2),n_dsav0)
 ## Set A&E parameters
 flag_supply_schedule_file_hED <- TRUE # whether to use (unscaled) seasonal ED variation from Dnc file. If so, n_AEbays will be used as average A&E bays over time horizon
 flag_LoS_file <- FALSE                   # whether LoS should come from file. 
-T_AE <- 5.96                           # period in AE (used if not loaded from file) , in hours
+T_AE <- 6.5                           # period in AE (used if not loaded from file) , in hours
 n_AEbays <- 1500*1#                    # FAKE INPUT # number of A&E bays / A&E capacity
 t_AEsupplyshock <- 7*24*60             # when to apply supply shock, in minutes from t0
 dn_AEsupplyshock <- 0                  # number of bays to change by, upon shock (for decrease, use negative number)
 
 # What-if parameters -------------------------------------------------
-tamper_dsa_flag <- TRUE              # whether to tamper with DSA supply
-tamper_dsa_f <- 0.861               # factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)
+tamper_dsa_flag <- FALSE              # whether to tamper with DSA supply
+tamper_dsa_f <- 1               # factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)
 tamper_HO_flag <- FALSE ;   # whether to tamper with handover
 tamper_HO_f <-1 # factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)
 tamper_HT_flag <- FALSE                # whether to 'tamper' with H&T (F2F portion)
@@ -101,7 +101,7 @@ period_sch= n_days_week * 24 * 60      # weekly #Inf#24*60*2 # the periodicity o
 t_sch_ones = rep(1,n_windows_week)
 
 # Scenario 'Run Mode' parameters --------------------------------------------------------
-flag_scenarios <- TRUE    # whether to use scenario runs
+flag_scenarios <- FALSE   # whether to use scenario runs
 names_levers <- c("T_AE","tamper_dsa_flag","tamper_dsa_f","tamper_HT_flag","tamper_HT_pp","tamper_ST_flag","tamper_ST_pp")
 if (flag_scenarios){
   vec_T_AE = c(5.955)

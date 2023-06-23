@@ -149,7 +149,7 @@ tep_ttc_cat_m1a <- JCT_file_2_matrix(teparam_ttc_cat,n_cats,n_conv)
 df_DSA_sch <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"v_DnC_schedule.xlsx"),sheet="Supply-Enforced")
 
 df_validate <- read.xlsx(paste0(here() %>% dirname(),"/parameters/df_validation_HO.xlsx"),detectDates=TRUE)
-df_validate <- df_validate %>% filter(Date >= "2022-11-06", Date <="2022-11-20")
+df_validate <- df_validate %>% filter(Date >= 1, Date <=15)
 df_validate$step <- (1:nrow(df_validate)-1)*g.tday
 df_validate <- df_validate %>% rename(perc_delay30p=`HO.30+.%`,perc_delay60p=`HO.60+%`)
 df_validate <- df_validate %>% dplyr::select(-c(Cat2.RT,Date))
@@ -159,9 +159,9 @@ df_validate <- df_validate %>% pivot_longer(cols=-c(step),names_to="quant_n",val
 ######### Escalation                                                  ####### ##
 ############################################################################# ##
 
-# Empirical function from dAC data that dictates relation between C2 mean, 30+ handover delays and the conveyance of Cat3
-x <- matrix(c(3421,47.4,39.3,
-              646,27.1,11.9), nrow = 3, dimnames = list(c("Kz_calls","Kz_RT_C2mean","Kz_HO30p"), c("mean","sd")))
+# Use a function (empirical, judgemental or other) that dictates relation between C2 mean, 30+ handover delays and the conveyance of Cat3
+x <- matrix(c(1000,40,30,
+              200,20,10), nrow = 3, dimnames = list(c("Kz_calls","Kz_RT_C2mean","Kz_HO30p"), c("mean","sd"))) # provide standardisation values of independent variables (mean, sd)
 dynamic_C3conv_standard = x
 dynamic_C3conv_coef <- c("c0"=0.444845348,
                          "c1"=0,
@@ -179,8 +179,7 @@ func_dynamic_C3conv <- function(Kz_calls,Kz_RT_C2mean,Kz_HO30p,coef=dynamic_C3co
   
   pconvey_C3_scene <- max(min(Kmax,pconvey_C3_scene),Kmin)
   
-  pconvey_C3_scene <- ifelse(is.na(pconvey_C3_scene),Kmin,pconvey_C3_scene) # possibly revisit. though likely some KPIs would be null if situation really bad, i.e. 'zero/zero' denominators as no clockstops / handovers etc
-  
+  pconvey_C3_scene <- ifelse(is.na(pconvey_C3_scene),Kmin,pconvey_C3_scene) #
   return(pconvey_C3_scene)
 }
 
