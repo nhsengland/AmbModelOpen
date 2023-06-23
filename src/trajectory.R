@@ -353,7 +353,7 @@ traj <- function(ii){
           #x=1
         }
         else if(JCT_type["tts"]=="Style"){
-          rlnormprm <- tep_tts_cat_m1a[cat,,conv] # 2 secs rather than 1 but nothing like the 30 secs gotten with the df filter!
+          rlnormprm <- tep_tts_cat_m1a[cat,,conv] #
           rlnormprm_type <- tail(rlnormprm,1)
           rlnormprm <- as.double(rlnormprm)
           x = switch(
@@ -374,7 +374,7 @@ traj <- function(ii){
           #x=1
           }
           else if(JCT_type["tas"]=="Style"){
-            rlnormprm <- tep_tas_cat_m1a[cat,,conv] # 2 secs rather than 1 but nothing like the 30 secs gotten with the df filter!
+            rlnormprm <- tep_tas_cat_m1a[cat,,conv] # 
             rlnormprm_type <- tail(rlnormprm,1)
             rlnormprm <- as.double(rlnormprm)
             x_tas = switch(
@@ -396,7 +396,7 @@ traj <- function(ii){
             #x=1
           }
           else if(JCT_type["ttsi"]=="Style"){
-            rlnormprm <- tep_ttsi_cat_m1a[cat,,conv] # 2 secs rather than 1 but nothing like the 30 secs gotten with the df filter!
+            rlnormprm <- tep_ttsi_cat_m1a[cat,,conv] #
             rlnormprm_type <- tail(rlnormprm,1)
             rlnormprm <- as.double(rlnormprm)
             x_ttsi = switch(
@@ -417,7 +417,7 @@ traj <- function(ii){
           #x=1
         }
         else if(JCT_type["uph"]=="Style"){
-          rlnormprm <- tep_uph_cat_m1a[cat,,conv] # 2 secs rather than 1 but nothing like the 30 secs gotten with the df filter!
+          rlnormprm <- tep_uph_cat_m1a[cat,,conv] # 
           rlnormprm_type <- tail(rlnormprm,1)
           rlnormprm <- as.double(rlnormprm)
           x_uph = switch(
@@ -438,7 +438,7 @@ traj <- function(ii){
           #x=1
         }
         else if(JCT_type["ttc"]=="Style"){
-          rlnormprm <- tep_ttc_cat_m1a[cat,,conv] # 2 secs rather than 1 but nothing like the 30 secs gotten with the df filter!
+          rlnormprm <- tep_ttc_cat_m1a[cat,,conv] # 
           rlnormprm_type <- tail(rlnormprm,1)
           rlnormprm <- as.double(rlnormprm)
           x_ttc = switch(

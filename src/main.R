@@ -16,7 +16,6 @@
 # Clear vars in environment ----------------------------------------------------
 rm(list = ls())
 gc() # garbage collection to take place
-.rs.restartR()
 set.seed(995)
 
 # Source libraries -------------------------------------------------------------
@@ -26,10 +25,10 @@ set.seed(995)
 source("packages.R")
 
 # Create scenario folder and output directory ----------------------------------
-scenario_folder <- "Fake_Scenario"
+scenario_folder <- "Fake_Data_2"
 scenario_folder <- paste0(scenario_folder,"/")
 
-mydate = "Fake_Scenario1"
+mydate = "Fake_Scenario2"
 
 mydate_ori <- mydate;
 
