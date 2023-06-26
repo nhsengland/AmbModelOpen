@@ -11,7 +11,16 @@ This repository holds code for AmbModelOpen: A discrete event simulation of ambu
 
 - The main code is found in the src folder
 - More information about the code usage can be found in the [model card](./model_card.md)
-- Documentation is created by MkDocs 
+- Documentation is created by MkDocs and can be locally loaded as follows
+    - Open Anaconda Prompt
+    - Navigate to main repository folder (local) with `cd {my_relative_path/.../AmbModel}`
+    - Install mkdocs `pip install mkdocs`
+    - Install material:
+        -  `pip install mkdocs-material`
+        -  extension for reading xls tables: `pip install mkdocs-table-reader-plugin` ; `pip install openpyxl`
+    - Type `mkdocs serve`
+    - This will provide a locally hosted html link of the sort http://xxx.x.x:8000/ . Copy and open in browser.
+    - The install steps can be skipped in further loads
 
 ### Built With
 
@@ -28,7 +37,7 @@ To clone the repo:
 
 `git clone https://github.com/nhsengland/ambmodelopen`
 
-Launch the `stmnhsx.Rproj` file in a suitable IDE (e.g. RStudio).  
+Launch the `ambsim.Rproj` file in a suitable IDE (e.g. RStudio).  
 
 The required packages are stored in `src/packages.R`.
 
