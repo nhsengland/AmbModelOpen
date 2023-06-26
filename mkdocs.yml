@@ -1,0 +1,27 @@
+site_name: AmbSim
+site_url: https://ambsim.com/
+nav:
+  - Home: index.md
+  - Problem Setting: problem.md
+  - 'Representative Model': 
+    - Chosen method: chosenmethod.md
+    - Data Sources (Inputs): data.md 
+    - Evidence and Insights (Assumptions): insights.md 
+  - 'Optimized Model': 
+    - Model Build Summary: run.md
+    - Repository Structure: structure.md 
+    - User Settings (Config): config.md
+    - Inputs: inputs.md
+  - 'Solution': 
+    - Validation: validation.md
+    - Results: results.md
+  - 'User guide':
+    - Starting a run: examplerun.md
+    - Parameter input files: userguide.md
+    - Overview of output files: interpretoutput.md
+  - Contact: contact.md
+theme: 
+  name: material
+  logo: assets/simulation_badge_M.png
+plugins:
+    - table-reader
