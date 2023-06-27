@@ -3,7 +3,7 @@ To get an example run going, follow the following steps:
 
 - Use the `config.R`, `main.R` and `inputs.R` as given in the main branch as default (as there have already been set up to align with a given scenario).
 - Open `main.R` . Use `mydate` to change the name of the subfolder to which the results should be saved (within "Output"). e.g. to name it "myexamplerun" set `mydate <- "myexamplerun"`.
-- The run has been set to use scenario folder `Fake_Scenario` for reading inputs (in `/parameter` subfolder).
+- The run has been set to use scenario folder `Fake_Data_2` for reading inputs (in `/parameter` subfolder).
 - "Select all" in `main.R` and then press `run` or `Ctrl+R`. The run may take some minutes given it is set to run 10 replications, each covering a 15 day simulation time period for a whole trust footprint.
 - After the run, some results will be printed to the Console or the Plots viewer. A range of relevant outputs will be saved to the folder selected above, e.g. `./Outputs/myexamplerun/` .
 - This should have successfully concluded a run!
