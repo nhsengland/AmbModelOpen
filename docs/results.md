@@ -51,6 +51,7 @@ Example outcomes from `parameters/Fake_Data_2/` scenario , with `n_AEbays <- 150
 ### Select Job Cycle Time KPIs
 
 **Table** KPIs 'Time to allocate' , 'Time for pre-handover', 'Total job cycle time', 'Response time', per conveyance. Mean and median.
+
 {{ read_excel('./assets/Fake_Scenario_2/KPI_overall_val_conv.xlsx', engine='openpyxl') }}
 
 ### Call queue KPIs
@@ -60,7 +61,7 @@ Example outcomes from `parameters/Fake_Data_2/` scenario , with `n_AEbays <- 150
 
 ### (Hospital) site queue KPIs
 
-**Figure** Averege site queue KPI per simulation time-steps (24 hour window). Boxplots showing inter-replication variation.
+**Figure** Average site queue KPI per simulation time-steps (24 hour window). Boxplots showing inter-replication variation.
 ![Call queue KPIs for Fake_Data_2.](../assets/Fake_Scenario_2/p_KPI_sq_1_day.png)
 
 
