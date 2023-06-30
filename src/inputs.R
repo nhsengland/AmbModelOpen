@@ -12,27 +12,27 @@
 ######### Demand                                                      ####### ##
 ############################################################################# ##
 
-#df_demand_sch <- read.xlsx(paste0(here() %>% dirname(),"/parameters/v_demand_schedule.xlsx"),sheet="Sheet1") # if so, peak normalised demand schedule 
+#df_demand_sch <- read.xlsx(paste0(here(),"/parameters/v_demand_schedule.xlsx"),sheet="Sheet1") # if so, peak normalised demand schedule 
 #df_demand_sch <- df_demand_sch %>% mutate(Demand = Demand_norm * ambu_hour_peak) # round to unity not needed since we're using it as a hourly poisson rate
-df_demand_sch <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"v_DnC_schedule.xlsx"),sheet="Demand-Enforced")
-meta_dnc <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"v_DnC_schedule.xlsx"),sheet="Controls")
+df_demand_sch <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"v_DnC_schedule.xlsx"),sheet="Demand-Enforced")
+meta_dnc <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"v_DnC_schedule.xlsx"),sheet="Controls")
 flag_demand_schedule_variantcat <- meta_dnc[ifelse(is.na(meta_dnc$CONTROLS),"",meta_dnc$CONTROLS)=="Should category distribution vary over time?","X2"]   # whether demand by category is time-variant. If so, taken from schedule file. If not, taken from cat2conv file
 flag_demand_schedule_variantcat <- ifelse(flag_demand_schedule_variantcat=="Yes",TRUE,FALSE)
 
 # Define relative distribution of demand by category . Will be superseded if schedule file has 'time variant' as on.
-#v_demand_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/v_demand_cat.xlsx"))
-v_demand_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_demand_cat")
+#v_demand_cat <- read.xlsx(paste0(here(),"/parameters/v_demand_cat.xlsx"))
+v_demand_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_demand_cat")
 
 # Define relative distribution of conveyance by category
-m_demand_cat2conv <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="m_demand_cat2conv")
+m_demand_cat2conv <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="m_demand_cat2conv")
 
 # Define relation between category (or direct) and ED acuity
-m_acuity <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_direct_acuity")
+m_acuity <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_direct_acuity")
 n_acuity <- nrow(m_acuity)
 
 # Define direct - how much these are as an uplift of conveyance
 if(!flag_demand_schedule){
-  v_direct_ratio <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_direct_ratio")
+  v_direct_ratio <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_direct_ratio")
   direct_day_proxy <- v_direct_ratio$EDattendance_Rel_to_AmbConveyance[1] * ambu_day * v_demand_conv["SeeConvey",1]
 }
 
@@ -48,14 +48,14 @@ v_demand_conv <- t(m_demand_cat2conv) %*% v_demand_cat$Rel
 
 # Define portion of conveyance going to ED (of all conveyances)
 v_conveyED <- tryCatch(
-  expr={read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_conveydestination")},
+  expr={read.xlsx(paste0(here(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_conveydestination")},
   error=function(e){data.frame(Cat=c(1,2,3,4),`perc_toED`=0.9124)}
 )
 
 
 # Define length of stay by category
 v_LoS_ori <- tryCatch(
-  expr={read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_LoS")},
+  expr={read.xlsx(paste0(here(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_LoS")},
   error=function(e){data.frame(Cat=c(1,2,3,4,"D"),`LoS`=5.96)}
 )
  
@@ -79,7 +79,7 @@ n_conv = length(vi_conv)
 
 ## Define the distributions for job cycle time ---------------------------------
 ## Type of sampling (Quantile-based or Stylistic parametrisation-based.)
-JCT_type <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_v_type.xlsx")) %>% as.vector()
+JCT_type <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_v_type.xlsx")) %>% as.vector()
 
 ## JCT as quantile - upload ----------------------------------------------------
 # Function for dataframe to matrix conversion
@@ -92,26 +92,26 @@ JCT_qfile_2_matrix <- function(teq_jct_cat,n_cats,n_conv){
 }
 
 # Travel to scene - quant
-teq_tts_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="traveltoscene")
+teq_tts_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="traveltoscene")
 teq_tts_cat_m1a <- JCT_qfile_2_matrix(teq_tts_cat,n_cats,n_conv)
 
 # Matrices for each of the JCT components (quantile)
-teq_tts_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="traveltoscene")
+teq_tts_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="traveltoscene")
 teq_tts_cat_m1a <- JCT_qfile_2_matrix(teq_tts_cat,n_cats,n_conv)
 
-teq_tas_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="timeatscene")
+teq_tas_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="timeatscene")
 teq_tas_cat_m1a <- JCT_qfile_2_matrix(teq_tas_cat,n_cats,n_conv)
 
-teq_ttsi_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="traveltosite")
+teq_ttsi_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="traveltosite")
 teq_ttsi_cat_m1a <- JCT_qfile_2_matrix(teq_ttsi_cat,n_cats,n_conv)
 
-teq_uph_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="unavoidableprehandover")
+teq_uph_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="unavoidableprehandover")
 teq_uph_cat_m1a <- JCT_qfile_2_matrix(teq_uph_cat,n_cats,n_conv)
 if(tamper_HO_flag){
   teq_uph_cat_m1a <- teq_uph_cat_m1a * tamper_HO_f
 }
 
-teq_ttc_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="timetoclear")
+teq_ttc_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_q.xlsx"),sheet="timetoclear")
 teq_ttc_cat_m1a <- JCT_qfile_2_matrix(teq_ttc_cat,n_cats,n_conv)
 
 ## JCT as stylistic parametrisation - upload -----------------------------------
@@ -126,19 +126,19 @@ JCT_file_2_matrix <- function(teparam_jct_cat,n_cats,n_conv){
 }
 
 # Matrices for each of the JCT components
-teparam_tts_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="traveltoscene")
+teparam_tts_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="traveltoscene")
 tep_tts_cat_m1a <- JCT_file_2_matrix(teparam_tts_cat,n_cats,n_conv)
 
-teparam_tas_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="timeatscene")
+teparam_tas_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="timeatscene")
 tep_tas_cat_m1a <- JCT_file_2_matrix(teparam_tas_cat,n_cats,n_conv)
 
-teparam_ttsi_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="traveltosite")
+teparam_ttsi_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="traveltosite")
 tep_ttsi_cat_m1a <- JCT_file_2_matrix(teparam_ttsi_cat,n_cats,n_conv)
 
-teparam_uph_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="unavoidableprehandover")
+teparam_uph_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="unavoidableprehandover")
 tep_uph_cat_m1a <- JCT_file_2_matrix(teparam_uph_cat,n_cats,n_conv)
 
-teparam_ttc_cat <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="timetoclear")
+teparam_ttc_cat <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"JCT_m_style.xlsx"),sheet="timetoclear")
 tep_ttc_cat_m1a <- JCT_file_2_matrix(teparam_ttc_cat,n_cats,n_conv)
 
 ############################################################################# ##
@@ -146,9 +146,9 @@ tep_ttc_cat_m1a <- JCT_file_2_matrix(teparam_ttc_cat,n_cats,n_conv)
 ############################################################################# ##
 
 ## DSA Resource Schedule Profile From file
-df_DSA_sch <- read.xlsx(paste0(here() %>% dirname(),"/parameters/",scenario_folder,"v_DnC_schedule.xlsx"),sheet="Supply-Enforced")
+df_DSA_sch <- read.xlsx(paste0(here(),"/parameters/",scenario_folder,"v_DnC_schedule.xlsx"),sheet="Supply-Enforced")
 
-df_validate <- read.xlsx(paste0(here() %>% dirname(),"/parameters/df_validation_HO.xlsx"),detectDates=TRUE)
+df_validate <- read.xlsx(paste0(here(),"/parameters/df_validation_HO.xlsx"),detectDates=TRUE)
 df_validate <- df_validate %>% filter(Date >= 1, Date <=15)
 df_validate$step <- (1:nrow(df_validate)-1)*g.tday
 df_validate <- df_validate %>% rename(perc_delay30p=`HO.30+.%`,perc_delay60p=`HO.60+%`)

@@ -22,7 +22,7 @@ set.seed(995)
 #invisible(lapply(paste0("package:", names(sessionInfo()$otherPkgs)),   # Unload add-on packages
 #                 detach,
 #                 character.only = TRUE, unload = TRUE))# to not have e.g. bupaR mask select from simmer
-source("packages.R")
+source(here::here("src","packages.R"))
 
 # Create scenario folder and output directory ----------------------------------
 scenario_folder <- "Fake_Data_2"
@@ -41,10 +41,10 @@ if (!dir.exists(here::here("Output"))){
 ######### Inputs                                                      ####### ##
 ############################################################################# ##
 # Source user inputs -----------------------------------------------------------
-source("config.R")
+source(here::here("src","config.R"))
 
 # Source data inputs -----------------------------------------------------------
-source("inputs.R")
+source(here::here("src","inputs.R"))
 
 
 #### Preset for scenarios #####
@@ -177,7 +177,7 @@ for (myr in 1:nrow(df_scenarios)) {
   ######### RUN                                                         ####### ##
   ############################################################################# ##
   set.seed(995)
-  source("trajectory.R");
+  source(here::here("src","trajectory.R"));
   # Run simulation (multiple runs) - not parallelised ----------------------------------------------------------
   start_time <- Sys.time()
   #sims <- traj(1)
@@ -188,8 +188,8 @@ for (myr in 1:nrow(df_scenarios)) {
   ######### POST-PROCESSING AND SAVE                                    ####### ##
   ############################################################################# ##
   
-  source("post-processing.R")
-  source("save.R")
+  source(here::here("src","post-processing.R"))
+  source(here::here("src","save.R"))
   
 };
 
