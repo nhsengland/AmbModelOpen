@@ -10,8 +10,8 @@ nav:
   - 'Optimized Model': 
     - Model Build Summary: run.md
     - Repository Structure: structure.md 
-    - User Settings (Config): config.md
     - Inputs: inputs.md
+    - User Settings (Config): config.md
   - 'Solution': 
     - Validation: validation.md
     - Results: results.md
@@ -19,6 +19,7 @@ nav:
     - Starting a run: examplerun.md
     - Parameter input files: userguide.md
     - Overview of output files: interpretoutput.md
+  - Glossary: glossary.md
   - Contact: contact.md
 theme: 
   name: material

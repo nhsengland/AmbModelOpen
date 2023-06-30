@@ -18,18 +18,15 @@ rm(list = ls())
 gc() # garbage collection to take place
 set.seed(995)
 
+# Specify desired (existing) scenario folder and  output directory (USER SETTINGS) ----------------------------------
+scenario_folder <- "Fake_Data_2" # existing scenario folder to use (in AmbModelOpen/parameters)
+mydate = "Fake_Scenario2_01" # specify name of (new) folder that should contain Outputs (will appear in AmbModelOpen/Outputs)
+
 # Source libraries -------------------------------------------------------------
-#invisible(lapply(paste0("package:", names(sessionInfo()$otherPkgs)),   # Unload add-on packages
-#                 detach,
-#                 character.only = TRUE, unload = TRUE))# to not have e.g. bupaR mask select from simmer
 source(here::here("src","packages.R"))
 
-# Create scenario folder and output directory ----------------------------------
-scenario_folder <- "Fake_Data_2"
+
 scenario_folder <- paste0(scenario_folder,"/")
-
-mydate = "Fake_Scenario2_01"
-
 mydate_ori <- mydate;
 
 if (!dir.exists(here::here("Output"))){

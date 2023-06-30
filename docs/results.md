@@ -1,10 +1,18 @@
-> **Warning**
-> Internal documentation for the results of Phase 1 of the work (March-April 2023) and Phase 2 of the work (April-May 2023) not made public.
+> **Note**
+> Internal NHSE documentation for the results of Phase 1 of the work (March-April 2023) and Phase 2 of the work (April-May 2023) not made public.
 > Outputs from the Toy / Fake scenarios shown below to exemplify outputs.
 
-Graphical visualisations and summary metrics (those below and beyond) can be obtained by pre-processing either the Log of Arrivals (log_arrivals.xlsx) or the Log of Attributes (log_attributes_w.xlsx). These will be saved if `flag_savedata_fulllogs <- TRUE`. 
+The "foundation" outputs of the model are the Log of Arrivals (log_arrivals.xlsx) and the Log of Attributes (log_attributes_w.xlsx).
 
-## Example outcomes from Fake_Data_2
+These will be saved if `flag_savedata_fulllogs <- TRUE` in `config.R` (a reason to set this to False may be avoiding to save large files unnecessarily).
+
+All relevant graphical visualisations and summary metrics can likely be created from these.
+
+The script `post-processing.R` already has specified and produces a range of outputs based on those logs, both in table and visual format. These are shown below.
+
+Alternatively, the end-user is free to do their own post-processing with the logs given.
+
+## Example outputs from Fake_Data_2
 
 Example outcomes from `parameters/Fake_Data_2/` scenario , with `n_AEbays <- 1500`, `T_AE <- 6.5`, `flag_LoS_file <- FALSE`, `dn_AEsupplyshock <- 0`
 

@@ -7,21 +7,27 @@
 ## Called by: main.R
 ##
 ############################################################################# ##
+
+## Packages to install
+
+flag_install_packages <- FALSE
+#c_packagestoinstall <- c("tidyverse","simmer","simmer.plot","EnvStats","psych","hrbrthemes","htmlwidgets","here","webshot","openxlsx")
+c_packagestoinstall <- c()  # Include packages yet to be installed (among list above)
+
+if (flag_install_packages){
+  install.packages(c_packagestoinstall)
+}
+
+## Packages to load
 '%!in%' <- function(x,y)!('%in%'(x,y))
 library(tidyverse)
-#library(parallel)
 library(simmer)
 library(simmer.plot)
 library(EnvStats)
-library(viridis)
 library(psych)
 library(hrbrthemes)
 library(htmlwidgets)
 library(here)
 library(webshot)
 library(openxlsx)
-#library(reticulate) # for arrays
-#install.packages("psych")
 
-# https://search.r-project.org/CRAN/refmans/EnvStats/html/LognormalTrunc.html
-# https://stats.stackexchange.com/questions/103356/truncate-lognormal-distribution-with-excel

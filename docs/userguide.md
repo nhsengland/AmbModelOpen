@@ -1,8 +1,5 @@
 
-> **Warning**
-> IN CONSTRUCTION.
-
-# Input files for demand, supply, JCT
+# Parameter Input files for demand, supply, JCT
 
 All file based parameters should be updated in a newly created folder within `/parameters` .
 
@@ -11,6 +8,16 @@ The folder `Fake_Data_2` can be copied and renamed (e.g. to `NewRun`). This give
 To use this parameter folder, in `main.R` update `scenario_folder` as appropriate, i.e. `scenario_folder<-"NewRun"`.
 
 Note that whether individual files and parameters within the folder are loaded and used in the DES model runs will depend on whether relevant flags or controls have been turned on (e.g. in `config.R`). This is highlighted below for the relevant sections.
+
+## Constituent parameter input files of a scenario folder
+
+The model expects the following parameter input files to be present in the folder:
+
+- `JCT_v_type.xlsx` - file to specify whether JCT components are set based on quantiles or stylistic (parametric) distributions.
+- `JCT_m_q.xlsx` - file that specifies the distributions for JCT components based on quantiles, by category and model of care.
+- `JCT_m_style.xlsx` - file that specifies the distributions for JCT components based on stylistic distributions (constant or lognormal).
+- `m_demand_cat2conv.xlsx` - file that specifies demand by category ; model of care by category ; time in A&E department ; ED acuity by category or direct attendance; % conveyance to ED.
+- `v_DnC_schedule.xlsx` - file that specifies demand (ambulance, direct) and capacity (double staffed vehicles, ED) profiles over time.
 
 ## Input file 'm_demand_cat2conv.xlsx'
 
