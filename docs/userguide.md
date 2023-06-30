@@ -6,7 +6,7 @@
 
 All file based parameters should be updated in a newly created folder within `/parameters` .
 
-The folder `Fake_Scenario` can be copied and renamed (e.g. to `NewRun`). This gives a pre-filled starting point from which assumptions can be changed as deemed fit.
+The folder `Fake_Data_2` can be copied and renamed (e.g. to `NewRun`). This gives a pre-filled starting point from which assumptions can be changed as deemed fit.
 
 To use this parameter folder, in `main.R` update `scenario_folder` as appropriate, i.e. `scenario_folder<-"NewRun"`.
 

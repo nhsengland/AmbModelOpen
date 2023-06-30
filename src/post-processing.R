@@ -548,7 +548,8 @@ postproc_callqueue <- function(log_resources,my_step){
     labs(title="Calls queued - non allocated (across replications)",x="Time (days)",y="Nr (time window avg)")+
     theme(axis.text.x = element_text(angle = 0),text = element_text(size=10))+
     scale_x_discrete(breaks = v_breaks,
-                     labels = seq(0,length(v_breaks)-1,1));p_KPI_cq_1
+                     labels = seq(0,length(v_breaks)-1,1))+
+    scale_y_continuous(limits=c(0,NA));p_KPI_cq_1
   
   p_KPI_cq_2 <- ggplot(data = log_callqueue_avstep, aes(x=factor(step),y=queue)) +
     geom_boxplot() +
@@ -556,22 +557,22 @@ postproc_callqueue <- function(log_resources,my_step){
     labs(title="Calls queued - non allocated (across replications)",x="Time (days)",y="Nr (time window avg)")+
     theme(axis.text.x = element_text(angle = 0),text = element_text(size=10))+
     scale_x_discrete(breaks = v_breaks,
-                     labels = seq(0,length(v_breaks)-1,1));p_KPI_cq_2
+                     labels = seq(0,length(v_breaks)-1,1))+scale_y_continuous(limits=c(0,NA));p_KPI_cq_2
   
   return(list(p_KPI_cq_1,p_KPI_cq_2,log_callqueue_avstep))
 }
 
 aa <- postproc_callqueue(log_resources,0.25*g.tday)
-p_KPI_cq_1 <-aa[1]; p_KPI_cq_1
-p_KPI_cq_2 <- aa[2]; p_KPI_cq_2
+p_KPI_cq_1 <-aa[[1]]; p_KPI_cq_1
+p_KPI_cq_2 <- aa[[2]]; p_KPI_cq_2
 
 aa <- postproc_callqueue(log_resources,1*g.tday)
-p_KPI_cq_1_day <-aa[1]; p_KPI_cq_1_day
-p_KPI_cq_2_day <- aa[2] ; p_KPI_cq_2_day
+p_KPI_cq_1_day <-aa[[1]]; p_KPI_cq_1_day
+p_KPI_cq_2_day <- aa[[2]] ; p_KPI_cq_2_day
 log_CallQueue <- aa[[3]]
 
 aa <- postproc_callqueue(log_resources,(1/24)*g.tday)
-p_KPI_cq_1_hour <-aa[1]; p_KPI_cq_1_hour
+p_KPI_cq_1_hour <-aa[[1]]; p_KPI_cq_1_hour
 #p_KPI_cq_2_day <- aa[2] ; p_KPI_cq_2_day
 log_KPI_cq_1_hour<- aa[[3]]
 log_KPI_cq_1_hour <- log_KPI_cq_1_hour %>% mutate(hour=step%/%60,hour_=hour%%24)
@@ -617,7 +618,8 @@ postproc_sitequeue <- function(log_attributes,my_step){
     labs(title="Average ambulances queueing at site over time (across replications)",x="Time (days)",y="Nr (time window avg)")+
     theme(axis.text.x = element_text(angle = 0),text = element_text(size=10))+
     scale_x_discrete(breaks = v_breaks,
-                     labels = seq(0,length(v_breaks)-1,1));p_KPI_sq_1
+                     labels = seq(0,length(v_breaks)-1,1))+
+    scale_y_continuous(limits=c(0,NA));p_KPI_sq_1
   
   p_KPI_sq_2 <- ggplot(data = log_sitequeue_avstep, aes(x=factor(step),y=sitequeue)) +
     geom_col() +
@@ -625,19 +627,20 @@ postproc_sitequeue <- function(log_attributes,my_step){
     labs(title="Average ambulances queueing at site over time (per replication)",x="Time (days)",y="Nr (time window avg)")+
     theme(axis.text.x = element_text(angle = 0),text = element_text(size=10))+
     scale_x_discrete(breaks = v_breaks,
-                     labels = seq(0,length(v_breaks)-1,1));p_KPI_sq_2
+                     labels = seq(0,length(v_breaks)-1,1))+
+    scale_y_continuous(limits=c(0,NA));p_KPI_sq_2
 
   return(list(p_KPI_sq_1,p_KPI_sq_2,log_sitequeue_avstep))
 
 }
 
 aa <- postproc_sitequeue(log_attributes,0.25*g.tday)
-p_KPI_sq_1 <-aa[1]; p_KPI_sq_1
-p_KPI_sq_2 <- aa[2]; p_KPI_sq_2
+p_KPI_sq_1 <-aa[[1]]; p_KPI_sq_1
+p_KPI_sq_2 <- aa[[2]]; p_KPI_sq_2
 
 aa <- postproc_sitequeue(log_attributes,1*g.tday)
-p_KPI_sq_1_day <-aa[1]; p_KPI_sq_1_day
-p_KPI_sq_2_day <- aa[2] ; p_KPI_sq_2_day
+p_KPI_sq_1_day <-aa[[1]]; p_KPI_sq_1_day
+p_KPI_sq_2_day <- aa[[2]] ; p_KPI_sq_2_day
 log_SiteQueue <- aa[[3]]
 
 ###

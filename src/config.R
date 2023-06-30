@@ -130,6 +130,6 @@ val_month = val_months[1]               # change between 1,2,3 for some referenc
 flag_savedata_overallKPIs = T     # flag on whether to save overall KPI files
 flag_savedata_stepwiseKPIs = T    # flag on whether to save stepwise KPI files
 flag_savedata_fulllogs = F        # flag on whether to save full logs
-flag_saveplots =  F               # flag on whether to save plots
+flag_saveplots =  T               # flag on whether to save plots
 flag_patientpathplot = F          # plot(trajectory)
 g.debug=0                         # how many levels of depth of log detail to print. #0 for least.

@@ -115,6 +115,25 @@ if(flag_saveplots){
          width=20,
          height=15)
   
+  ggsave(paste0(output_folder,"/","plot_RU_KPI.png"),
+         p_ru4,
+         units="cm",
+         width=20,
+         height=15)
+  
+  # Calls queued on average per 6 hour window - boxplot of replications
+  ggsave(paste0(output_folder,"/","p_KPI_cq_1.png"),
+         p_KPI_cq_1,
+         units="cm",
+         width=20,
+         height=15)
+  
+  # Ambulances queueing on site on average per 6 hour window - boxplot of replications
+  ggsave(paste0(output_folder,"/","p_KPI_sq_1_day.png"),
+         p_KPI_sq_1_day,
+         units="cm",
+         width=20,
+         height=15)
   
   
 }

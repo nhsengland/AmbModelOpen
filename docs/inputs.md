@@ -30,7 +30,6 @@ Time-variant:
 - Proportion of Category3 ambulances (calculated from actual numbers of cat 2-4 ambulance calls multiplied by hourly profiles and category proportion)
 - Proportion of Category4 ambulances (calculated from actual numbers of cat 2-4 ambulance calls multiplied by hourly profiles and category proportion)
 
-![Inputted proportion for each ambulance category](../assets/CatProp.png)
 
 Time-invariant:
 
@@ -67,7 +66,12 @@ The relevant components are:
 - Time to clear
 - _(pre-handover and time to allocate are emerging queuing model characteristics, not inputs)_
 
-![Job cycle time component quantiles for ‘See and Treat’ incidents, Nov22, divided by categories.](../assets/input_JCT_ST.PNG)
+
+![Example input "Time at Scene" JCT component (Quantile-based). For ‘See and Treat’ incidents, divided by categories.](../assets/input_JCT_tas_st_F2.PNG)
+Fig. Example input "Time at Scene" JCT component (Quantile-based). For ‘See and Treat’ incidents, divided by categories.
+
+![Example input "Time at Scene" JCT component (Stylistic-based). For ‘See and Convey’ incidents, divided by categories.](../assets/input_JCT_tas_sc_F2.PNG)
+Fig. Example input "Time at Scene" JCT component (Stylistic-based). For ‘See and Convey’ incidents, divided by categories.
 
 ## Supply- Hourly Schedule
 The supply schedule is made up of a dataframe which covers hourly resources available for:

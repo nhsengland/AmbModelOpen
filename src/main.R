@@ -28,7 +28,7 @@ source(here::here("src","packages.R"))
 scenario_folder <- "Fake_Data_2"
 scenario_folder <- paste0(scenario_folder,"/")
 
-mydate = "Fake_Scenario2"
+mydate = "Fake_Scenario2_01"
 
 mydate_ori <- mydate;
 
@@ -205,8 +205,10 @@ p_arri_cat_CMfreey
 #p_Kp_RT90_bp_freey
 #plot_list$RU_instant # uncomment to render specific. e.g. here resource use cumulative
 #p_ru
-p_ru4
-p2_KPI_cq_1_hour # validate hourly stack
+p_ru4 # utlisation KPI - overall, batch
+#p2_KPI_cq_1_hour # validate hourly stack
+p_KPI_cq_1 # call stack
+p_KPI_sq_1_day # site stack
 #plot_list$p_Kp_handover_bp # uncomment to render specific. e.g. here handover KPI boxplot
 p_Kp_handover_bp_y0
 plot_list$p_Kp_RTmean_bp # uncomment to render specific. e.g. here Cat response time mean KPI boxplot
