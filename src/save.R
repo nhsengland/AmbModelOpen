@@ -85,8 +85,6 @@ if(flag_savedata_fulllogs){
 
 ### Plots ####
 
-# IMPLEMENT ME
-
 if(flag_saveplots){
  
   ggsave(paste0(output_folder,"/","plot_RU_instant_.png"),
@@ -94,14 +92,6 @@ if(flag_saveplots){
          units="cm",
          width=20,
          height=15)
-   
-  
-  ggsave(paste0(output_folder,"/","plot_Kp_RT90_bp_d14_ylim.png"),
-         p_Kp_RT90_bp + ylim(0,1000),
-         units="cm",
-         width=20,
-         height=15)
-
   
   ggsave(paste0(output_folder,"/","plot_arri_cat_CM.png"),
          p_arri_cat_CMfreey,

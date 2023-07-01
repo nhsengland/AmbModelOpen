@@ -8,7 +8,8 @@ This section explains the meaning of the output files.
 ## Output - logs
 
 Full simulation logs are saved if `flag_savedata_fulllogs <- TRUE` in `config.R`.
-Beware of use for very large simulations.
+
+These will be large if used for very large simulations (e.g. high number of replications / volume of arrivals / attributes) so if not directly needed at this granularity, could be turned off.
 
 | File           |   | Description                          |
 |:----------------:|:---:|:------------------------------:|
@@ -48,7 +49,7 @@ Variables in `log_resources.xlsx`.
 | replication|   | The model run replication number  |
 | id |   | n/a  |
 
-### Output - log of resources
+### Output - log of attributes
 
 Variables in `log_attributes_w.xlsx`.
 
@@ -92,6 +93,16 @@ An overview of the meaning of KPI output files is given below (navigate rightwar
 {{ read_excel('ambsim_outputs.xlsx', engine='openpyxl') }}
 
 
-## Output-  plots
+## Output - plot files
+
+A set of plots related to the KPIs are saved if  `flag_saveplots <- TRUE` in `config.R`.
+
+Some plots may, depending on the nature of the scenario, benefit from different scaling of presentation. When a run ends, all plots are kept in memory as plot objects in a structure called `plot_list`. These can be further adapted with `ggplot` as needed, or for instance saved as vector files (`.svg`) for image processing.
+
+Alternatively, though we generate these plots for ease, all of them can be generated independently by the user from one of the three full logs.
+
+An overview of the plots is given below.
+
+{{ read_excel('ambsim_plotfiles_outputs.xlsx', engine='openpyxl') }}
 
 

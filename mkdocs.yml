@@ -9,6 +9,7 @@ nav:
     - Evidence and Insights (Assumptions): insights.md 
   - 'Optimized Model': 
     - Model Build Summary: run.md
+    - Illustrative questions: illustrativequestions.md
     - Repository Structure: structure.md 
     - Inputs: inputs.md
     - User Settings (Config): config.md
@@ -19,7 +20,7 @@ nav:
     - Starting a run: examplerun.md
     - Parameter input files: userguide.md
     - Overview of output files: interpretoutput.md
-  - Glossary: glossary.md
+  - Glossary and reference: glossary.md
   - Contact: contact.md
 theme: 
   name: material
