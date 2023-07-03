@@ -14,10 +14,10 @@ The UEC recovery plan has been [published](https://www.england.nhs.uk/publicatio
 When a call is made, availability to respond to it depends namely on the number of on-duty ambulance fleet and the instantaneous availability to be allocated to that incoming call.  This in turn depends on when on-duty ambulances can be cleared from previous jobs (finish their job cycle time from allocation to clearance). Handover delays are leading to more ambulances queueing at the hospital site and an increase in job cycle time, which affects their availability for subsequent jobs.
 
 <p align="center">
-    <img src= "./assets/richpicture.png" alt="." widt="600"/>
+    <img src= "../assets/richpicture.png" alt="." widt="600"/>
 </p>
 
-The system to be modelled includes patient demand for A&E split into categories and conveyance routes.  Ambulances are allocated from a changing supply and act out a process time split into several “job cycle time” stages.  Some patients will not be conveyed to A&E but instead have a “see and treat” model of care.  Those arriving at A&E will queue for a bay alongside the direct walk-ins before being allocated a bay for a set amount of time. 
+The system to be modelled includes patient demand for A&E split into categories and conveyance routes.  Ambulances are allocated from a changing supply and act out a process time split into several “job cycle time” stages.  Some patients will not be conveyed to A&E but instead have a “see and treat” model osf care.  Those arriving at A&E will queue for a bay alongside the direct walk-ins before being allocated a bay for a set amount of time. 
 
 ## Approach
-Suggest using the open source R package RSimmer building off the back of previous [ambualnce DES](https://github.com/nhsx/ambulance-DES) work.  SimPy was also considered but previous related work has been done in RSimmer and SimPy requires a significant setup time to create the simulation objects and logging.  A Large range of Licensed software was also considered but it is preferable to work in software which is more collaborative and we don't imagine needing the additional functionality that the licensed software brings for this task. 
+Suggest using the open source R package RSimmer building off the back of previous [ambulance DES](https://github.com/nhsx/ambulance-DES) work.  SimPy was also considered but previous related work has been done in RSimmer and SimPy requires a significant setup time to create the simulation objects and logging.  A Large range of Licensed software was also considered but it is preferable to work in software which is more collaborative and we don't imagine needing the additional functionality that the licensed software brings for this task. 

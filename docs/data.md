@@ -8,39 +8,34 @@ Outlined below are Data Sources identified and requested for this work.
 For our this work we requested granular profiles rather than record level data. This is outlined below.
 
 #### Computer Aided Dispatch (CAD) / Ambulance Data Set (ADS)
-- Profile of relative demand by hour of a day
-- Profile of relative daily demand
-- Profile of relative demand by category and conveyance
-- Job Cycle Time (JCT) components - mean, standard deviation, percentiles
-- Relation between incident category and: ED acuity, ED length of stay (with ECDS)
+- Profile of relative demand by hour of a day (by category, conveyance)
+- Job Cycle Time (JCT) components - mean, standard deviation, percentiles (by category, conveyance)
+- Relation between incident category and: ED acuity, ED length of stay
 
 #### Emergency Care Data Set (ECDS)
 - Portion of ED Demand that is direct vs non-ambulance
-- Relation between incident category and: ED acuity, ED length of stay (with ADS)
+- Relation between being a walk-in and: ED acuity, ED length of stay
 
 #### National Ambulance Coordination Centre (NACC) report
--	Double Staffed Ambulance (DSA) fleet on-duty; daily (average, maximum); relative by hour of day
--	Rapid Response Vehicle (RRV) on-duty – daily; relative by hour of day
+-	Double Staffed Ambulance (DSA) fleet on-duty
+-	Rapid Response Vehicle (RRV) on-duty
 -	ED Cohorting
 -	Escalation status
 
-#### Ambulance Dashboard and Daily Ambulance Collection
--	Profile of relative daily demand (demand as: ‘F2F incidents’; ‘Incidents’; ‘Calls Answered’, ‘Contacts’)
--	Relative (F2F) demand by category and care model
+#### Daily Ambulance Collection
+-	Profile of ambsolute and relative daily demand (demand as: ‘F2F incidents’; ‘Incidents’; ‘Calls Answered’, ‘Contacts’)
+-	Absolute and relative (F2F) demand by category and care model
 -	Mean and 90th Response times daily trend
 -	Handover metrics daily trend
--	Care model relative apportioning daily trend
--	F2F category by care model
-
-#### From the previous modelling
-- DSA availability vs category 2 performance
-- Resources required to hit 30 mins
-- Handover & A&E Performance Relation
 
 ## Public Data Sources
 
 #### Ambulance Quality Indicators
-[source](https://www.england.nhs.uk/statistics/statistical-work-areas/ambulance-quality-indicators/)
+
+[NHS England, Ambulance Quality Indicators](https://www.england.nhs.uk/statistics/statistical-work-areas/ambulance-quality-indicators/)
+
 -	Mean and 90th Response times 
 -	Relative (F2F) demand by category
 -	Relative demand by care model
+-   Vehicles dispatched per incident and category
+-   Vehicles arriving at scene per incident and category
