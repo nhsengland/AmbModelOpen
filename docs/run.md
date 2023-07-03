@@ -1,6 +1,3 @@
-> **Warning**
-> IN CONSTRUCTION.
-
 The model is run as a discrete event simulation using the [RSimmer package](https://r-simmer.org/).  This type of modelling requires a "trajectory" to be fed with a realistic demand which then moves through the trajectory based on evidence based assumptions and resource supply usage.  The time it takes for the demand to make its way through the system and the utilisation of resources required for this can be monitored.  Each of these components will be explain in more detail below. 
 
 ## Trajectory
