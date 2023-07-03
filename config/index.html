@@ -1,0 +1,1337 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ambsim.com/config/">
+      
+      
+        <link rel="prev" href="../inputs/">
+      
+      
+        <link rel="next" href="../validation/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>User Settings (Config) - AmbSim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#batch-run-parameters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AmbSim" class="md-header__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AmbSim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User Settings (Config)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AmbSim" class="md-nav__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    AmbSim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem/" class="md-nav__link">
+        Problem Setting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Representative Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Representative Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chosenmethod/" class="md-nav__link">
+        Chosen method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Data Sources (Inputs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        Evidence and Insights (Assumptions)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Optimized Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Optimized Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        Model Build Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../illustrativequestions/" class="md-nav__link">
+        Illustrative questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        Repository Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inputs/" class="md-nav__link">
+        Inputs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          User Settings (Config)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        User Settings (Config)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#batch-run-parameters" class="md-nav__link">
+    batch run parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-parameters" class="md-nav__link">
+    simulation parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-parameters-only-used-if-demand-flag-not-from-file" class="md-nav__link">
+    simulation parameters (only used if demand flag not from file)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fallback-simulation-parameters-only-used-if-jct-error-in-loading-from-file-except-gt_prehandoverxed-and-gt_allocatetomobilise" class="md-nav__link">
+    Fallback simulation parameters (only used if JCT error in loading from file, except g.T_prehandoverXed and g.T_allocatetomobilise)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fallback-capacity-simulation-parameters-only-used-if-capacity-flag-not-from-file" class="md-nav__link">
+    Fallback capacity simulation parameters (only used if capacity flag not from file)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-the-ae-parameters" class="md-nav__link">
+    Set the A&amp;E parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-if-parameters" class="md-nav__link">
+    What-if parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escalationtrigger-parameters" class="md-nav__link">
+    escalation/trigger parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedule-parameters" class="md-nav__link">
+    Schedule parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-run-mode-parameters" class="md-nav__link">
+    Scenario 'Run Mode' parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-parameters" class="md-nav__link">
+    Plotting parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-parameters" class="md-nav__link">
+    Saving parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Solution
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Solution
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          User guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examplerun/" class="md-nav__link">
+        Starting a run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../userguide/" class="md-nav__link">
+        Parameter input files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpretoutput/" class="md-nav__link">
+        Overview of output files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary and reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#batch-run-parameters" class="md-nav__link">
+    batch run parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-parameters" class="md-nav__link">
+    simulation parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-parameters-only-used-if-demand-flag-not-from-file" class="md-nav__link">
+    simulation parameters (only used if demand flag not from file)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fallback-simulation-parameters-only-used-if-jct-error-in-loading-from-file-except-gt_prehandoverxed-and-gt_allocatetomobilise" class="md-nav__link">
+    Fallback simulation parameters (only used if JCT error in loading from file, except g.T_prehandoverXed and g.T_allocatetomobilise)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fallback-capacity-simulation-parameters-only-used-if-capacity-flag-not-from-file" class="md-nav__link">
+    Fallback capacity simulation parameters (only used if capacity flag not from file)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-the-ae-parameters" class="md-nav__link">
+    Set the A&amp;E parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-if-parameters" class="md-nav__link">
+    What-if parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escalationtrigger-parameters" class="md-nav__link">
+    escalation/trigger parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedule-parameters" class="md-nav__link">
+    Schedule parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-run-mode-parameters" class="md-nav__link">
+    Scenario 'Run Mode' parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-parameters" class="md-nav__link">
+    Plotting parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-parameters" class="md-nav__link">
+    Saving parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>User Settings (Config)</h1>
+
+<p>The <code>config.R</code> file contains all the user parameters and controls for the model.  These can be categorised into several groups of parameters.</p>
+<p>The below shows these parameters with a default assignment but this can be changed.</p>
+<h4 id="batch-run-parameters">batch run parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">nreps = 10</td>
+<td align="center"></td>
+<td align="center"># number of replications</td>
+</tr>
+</tbody>
+</table>
+<h4 id="simulation-parameters">simulation parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">n_days_week &lt;- 7</td>
+<td align="center"></td>
+<td align="center"># days in a week. constant</td>
+</tr>
+<tr>
+<td align="center">g.tday = 24*60</td>
+<td align="center"></td>
+<td align="center"># minutes in a day. constant.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="simulation-parameters-only-used-if-demand-flag-not-from-file">simulation parameters (only used if demand flag not from file)</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ambu_day &lt;- 100</td>
+<td align="center"></td>
+<td align="center"># Parameter to poisson , only used if demand not from file.  120 is typical daily avg per most affected trusts, but varies considerably.</td>
+</tr>
+<tr>
+<td align="center">n_days_warm &lt;- 1</td>
+<td align="center"></td>
+<td align="center"># days of warm-up , if demand not from file, only used to dictate time to remove for output KPI purposes.</td>
+</tr>
+<tr>
+<td align="center">n_days_study &lt;- 14</td>
+<td align="center"></td>
+<td align="center"># days to observe , only used if demand not from file</td>
+</tr>
+<tr>
+<td align="center">ndays &lt;- n_days_warm + n_days_study</td>
+<td align="center"></td>
+<td align="center"># days of study (warm-up + observe), only used if demand not from file</td>
+</tr>
+<tr>
+<td align="center">g.tmax=24<em>60</em>ndays;</td>
+<td align="center"></td>
+<td align="center"># one day . Note: this may be different to implied by schedules.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fallback-simulation-parameters-only-used-if-jct-error-in-loading-from-file-except-gt_prehandoverxed-and-gt_allocatetomobilise">Fallback simulation parameters (only used if JCT error in loading from file, except g.T_prehandoverXed and g.T_allocatetomobilise)</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">g.T_allocatetomobilise=0</td>
+<td align="center"></td>
+<td align="center"># Time period from allocate to mobilise.</td>
+</tr>
+<tr>
+<td align="center">g.T_traveltoscene &lt;- 22</td>
+<td align="center"></td>
+<td align="center"># Time period to travel to scene. 22 to match travel to hospital. Under assumption that ambulances can't travel from their optimal spot. All pivot back and forth from site.</td>
+</tr>
+<tr>
+<td align="center">g.T_atscene &lt;- 36</td>
+<td align="center"></td>
+<td align="center"># Time period at scene.</td>
+</tr>
+<tr>
+<td align="center">g.T_traveltohospital &lt;- 22</td>
+<td align="center"></td>
+<td align="center"># Time period to travel to hospital site.</td>
+</tr>
+<tr>
+<td align="center">g.T_prehandover_LN</td>
+<td align="center"></td>
+<td align="center"># Time period for pre-handover. Define the logmean, logsd, offset</td>
+</tr>
+<tr>
+<td align="center">g.T_clear=5</td>
+<td align="center"></td>
+<td align="center"># Time period for clearance</td>
+</tr>
+<tr>
+<td align="center">g.T_prehandoverXed &lt;- 40</td>
+<td align="center"></td>
+<td align="center"># Assumed period to pre-handover for X ED conveyances</td>
+</tr>
+<tr>
+<td align="center">g.T_prehandover_LN_median</td>
+<td align="center"></td>
+<td align="center"># Derived field. Time period for pre-handover. Median from distribution</td>
+</tr>
+<tr>
+<td align="center">g.T_prehandover_LN_mean</td>
+<td align="center"></td>
+<td align="center"># Derived field. Time period for pre-handover. Mean from distribution</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fallback-capacity-simulation-parameters-only-used-if-capacity-flag-not-from-file">Fallback capacity simulation parameters (only used if capacity flag not from file)</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">n_ru0 &lt;- 500</td>
+<td align="center"></td>
+<td align="center"># number of staff (pool) - ideally twice of n_dsav0 (assuming all DSA vehicles and desired full use)</td>
+</tr>
+<tr>
+<td align="center">n_dsav0 &lt;- 250</td>
+<td align="center"></td>
+<td align="center"># number of double-staff vehicles (pool)</td>
+</tr>
+<tr>
+<td align="center">n_mobile0 &lt;- min(floor(n_ru0/2),n_dsav0)</td>
+<td align="center"></td>
+<td align="center"># Derived field</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-the-ae-parameters">Set the A&amp;E parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">flag_supply_schedule_file_hED &lt;- TRUE</td>
+<td align="center"></td>
+<td align="center"># whether to use (unscaled) seasonal ED variation from Dnc file. If so, n_AEbays will be used as average A&amp;E bays over time horizon</td>
+</tr>
+<tr>
+<td align="center">flag_LoS_file &lt;- FALSE</td>
+<td align="center"></td>
+<td align="center"># whether LoS should come from file.</td>
+</tr>
+<tr>
+<td align="center">T_AE &lt;- 5.96</td>
+<td align="center"></td>
+<td align="center"># period in AE (used if not loaded from file) , in hours</td>
+</tr>
+<tr>
+<td align="center">n_AEbays &lt;- 1500*1</td>
+<td align="center"></td>
+<td align="center"># number of A&amp;E bays / A&amp;E capacity</td>
+</tr>
+<tr>
+<td align="center">t_AEsupplyshock &lt;- 7<em>24</em>60</td>
+<td align="center"></td>
+<td align="center"># when to apply supply shock, in minutes from t0</td>
+</tr>
+<tr>
+<td align="center">dn_AEsupplyshock &lt;- 0</td>
+<td align="center"></td>
+<td align="center"># number of bays to change by, upon shock (for decrease, use negative number)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="what-if-parameters">What-if parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">tamper_dsa_flag &lt;- TRUE</td>
+<td align="center"></td>
+<td align="center"># whether to tamper with DSA supply</td>
+</tr>
+<tr>
+<td align="center">tamper_dsa_f &lt;- 0.861</td>
+<td align="center"></td>
+<td align="center"># factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)</td>
+</tr>
+<tr>
+<td align="center">tamper_HO_flag &lt;- FALSE</td>
+<td align="center"></td>
+<td align="center"># whether to tamper with handover</td>
+</tr>
+<tr>
+<td align="center">tamper_HO_f &lt;-1</td>
+<td align="center"></td>
+<td align="center"># factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)</td>
+</tr>
+<tr>
+<td align="center">tamper_HT_flag &lt;- FALSE</td>
+<td align="center"></td>
+<td align="center"># whether to 'tamper' with H&amp;T (F2F portion)</td>
+</tr>
+<tr>
+<td align="center">tamper_HT_pp &lt;- 5</td>
+<td align="center"></td>
+<td align="center"># the %p of F2F incidents to become H&amp;T, from S&amp;T - only cat3,4</td>
+</tr>
+<tr>
+<td align="center">tamper_ST_flag &lt;- FALSE</td>
+<td align="center"></td>
+<td align="center"># whether to 'tamper' with S&amp;T (conveyance)</td>
+</tr>
+<tr>
+<td align="center">tamper_ST_pp &lt;- 0</td>
+<td align="center"></td>
+<td align="center"># the %p to increase S&amp;T by, from S&amp;C - only cat3,4</td>
+</tr>
+<tr>
+<td align="center">DSV_holdout_flag = FALSE</td>
+<td align="center"></td>
+<td align="center"># flag for use of holdout (if so, part of resource is put aside and can only be used by cat1 in given circumstances)</td>
+</tr>
+<tr>
+<td align="center">DSV_holdout_perc = 0.2</td>
+<td align="center"></td>
+<td align="center"># percentage of on-duty fleet that is holdout</td>
+</tr>
+<tr>
+<td align="center">DSV_holdout_use_minqueue = 100</td>
+<td align="center"></td>
+<td align="center"># minimum queue in for ain DSV in order to allow holdout to be used</td>
+</tr>
+<tr>
+<td align="center">flag_EDpriority_adjust = TRUE</td>
+<td align="center"></td>
+<td align="center"># whether to do some deprioritising of direct vs ambulance at same acuity</td>
+</tr>
+<tr>
+<td align="center">p_direct_deprio &lt;- 0.2</td>
+<td align="center"></td>
+<td align="center"># the probability of direct being deprioritised compared to ambulance with same acuity</td>
+</tr>
+</tbody>
+</table>
+<h4 id="escalationtrigger-parameters">escalation/trigger parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">flag_renege &lt;- FALSE</td>
+<td align="center"></td>
+<td align="center"># whether to allow reneging (cat3,4)</td>
+</tr>
+<tr>
+<td align="center">T_renege &lt;- 18*60</td>
+<td align="center"></td>
+<td align="center"># time in minutes after which an arrival will renege</td>
+</tr>
+<tr>
+<td align="center">p_renege_directED &lt;- 0.25</td>
+<td align="center"></td>
+<td align="center"># probability that reneges will instead go straight to ED (rather than 'step down')</td>
+</tr>
+<tr>
+<td align="center">catmin_renege &lt;- 3</td>
+<td align="center"></td>
+<td align="center"># minimum category where reneges happen</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">flag_stepcat &lt;- TRUE</td>
+<td align="center"></td>
+<td align="center"># whether to allow calls to increase in priority after a time X</td>
+</tr>
+<tr>
+<td align="center">T_stepcat &lt;- 7*60</td>
+<td align="center"></td>
+<td align="center"># time in minutes after which to increase priority</td>
+</tr>
+<tr>
+<td align="center">catmin_stepcat &lt;- 3</td>
+<td align="center"></td>
+<td align="center"># minimum category for which this should apply (towards lower acuities)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">flag_balk_amb &lt;- FALSE</td>
+<td align="center"></td>
+<td align="center"># whether to allow balking. If FALSE, nqueue_balk will be overwritten to 'Inf'</td>
+</tr>
+<tr>
+<td align="center">nqueue_balk &lt;- 500</td>
+<td align="center"></td>
+<td align="center"># threshold of queue size. (#500 as WMAS saw a peak of circa 470 on unallocated calls across the day by month, in Dec22)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">no_ambulancesqueueingbreach &lt;- 10</td>
+<td align="center"></td>
+<td align="center"># no ambulances queueing in site for it to count as breach from new ambulance arrival perspective</td>
+</tr>
+<tr>
+<td align="center">no_arrivalbreaches &lt;- 10</td>
+<td align="center"></td>
+<td align="center"># trigger point: nr of arrivals in time window that observe queue length breach.</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">flag_dynamics &lt;- FALSE</td>
+<td align="center"></td>
+<td align="center"># whether to allow for Cat3 conveyance to dynamically adjust based on pressure</td>
+</tr>
+<tr>
+<td align="center">T_window_escalation_hours&lt;-8</td>
+<td align="center"></td>
+<td align="center"># cycle for escalation checks and also window used for KPI computation that informs escalation, in hours</td>
+</tr>
+</tbody>
+</table>
+<h4 id="schedule-parameters">Schedule parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">flag_demand_schedule &lt;- TRUE</td>
+<td align="center"></td>
+<td align="center"># whether demand (poisson rate) should vary per hour (given in file) . nb not disaggregated by cat</td>
+</tr>
+<tr>
+<td align="center">flag_supply_schedule &lt;- TRUE</td>
+<td align="center"></td>
+<td align="center"># whether supply should follow a schedule</td>
+</tr>
+<tr>
+<td align="center">flag_supply_schedule_file &lt;- TRUE</td>
+<td align="center"></td>
+<td align="center"># whether this schedule comes from the file</td>
+</tr>
+<tr>
+<td align="center">T_window_hours&lt;- 8</td>
+<td align="center"></td>
+<td align="center"># hours per window</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scenario-run-mode-parameters">Scenario 'Run Mode' parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">flag_scenarios &lt;- TRUE</td>
+<td align="center"></td>
+<td align="center"># whether to use scenario runs . Do not edit the below if under the 'else' statement (single scenario)</td>
+</tr>
+<tr>
+<td align="center">vec_T_AE = c(5.96)</td>
+<td align="center"></td>
+<td align="center"># vector for time in A&amp;E (hours)</td>
+</tr>
+<tr>
+<td align="center">vec_tamper_dsa_flag=c(TRUE)</td>
+<td align="center"></td>
+<td align="center"># vector for DSA flag</td>
+</tr>
+<tr>
+<td align="center">vec_tamper_dsa_f = c(0.82)</td>
+<td align="center"></td>
+<td align="center"># vector for DSA factor</td>
+</tr>
+<tr>
+<td align="center">vec_tamper_HT_flag = c(FALSE)</td>
+<td align="center"></td>
+<td align="center"># vector for H&amp;T flag</td>
+</tr>
+<tr>
+<td align="center">vec_tamper_HT_pp = c(0)</td>
+<td align="center"></td>
+<td align="center"># vector for H&amp;T p.p. change</td>
+</tr>
+<tr>
+<td align="center">vec_tamper_ST_flag = c(FALSE)</td>
+<td align="center"></td>
+<td align="center"># vector for S&amp;T flag</td>
+</tr>
+<tr>
+<td align="center">vec_tamper_ST_pp = c(0)</td>
+<td align="center"></td>
+<td align="center"># vector for S&amp;T p.p. change</td>
+</tr>
+</tbody>
+</table>
+<h4 id="plotting-parameters">Plotting parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">val_months = c("Month1","Month2","Month3")</td>
+<td align="center"></td>
+<td align="center"># not for editing</td>
+</tr>
+<tr>
+<td align="center">val_month = val_months[1]</td>
+<td align="center"></td>
+<td align="center"># change between 1,2,3 for some reference lines from publications to appear in graphs</td>
+</tr>
+</tbody>
+</table>
+<h4 id="saving-parameters">Saving parameters</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center"></th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">flag_savedata_overallKPIs = T</td>
+<td align="center"></td>
+<td align="center"># flag on whether to save overall KPI files</td>
+</tr>
+<tr>
+<td align="center">flag_savedata_stepwiseKPIs = T</td>
+<td align="center"></td>
+<td align="center"># flag on whether to save stepwise KPI files</td>
+</tr>
+<tr>
+<td align="center">flag_savedata_fulllogs = F</td>
+<td align="center"></td>
+<td align="center"># flag on whether to save full logs</td>
+</tr>
+<tr>
+<td align="center">flag_saveplots = T</td>
+<td align="center"></td>
+<td align="center"># flag on whether to save plots</td>
+</tr>
+<tr>
+<td align="center">flag_patientpathplot = F</td>
+<td align="center"></td>
+<td align="center"># plot(trajectory)</td>
+</tr>
+<tr>
+<td align="center">g.debug=0</td>
+<td align="center"></td>
+<td align="center"># how many levels of depth of log detail to print. #0 for least.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,798 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ambsim.com/examplerun/">
+      
+      
+        <link rel="prev" href="../results/">
+      
+      
+        <link rel="next" href="../userguide/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>Starting a run - AmbSim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#code-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AmbSim" class="md-header__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AmbSim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Starting a run
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AmbSim" class="md-nav__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    AmbSim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem/" class="md-nav__link">
+        Problem Setting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Representative Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Representative Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chosenmethod/" class="md-nav__link">
+        Chosen method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Data Sources (Inputs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        Evidence and Insights (Assumptions)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Optimized Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Optimized Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        Model Build Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../illustrativequestions/" class="md-nav__link">
+        Illustrative questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        Repository Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inputs/" class="md-nav__link">
+        Inputs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        User Settings (Config)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Solution
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Solution
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          User guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Starting a run
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Starting a run
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-setup" class="md-nav__link">
+    Code Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-a-run-first-run" class="md-nav__link">
+    Starting a run (first run)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-my-own-custom-scenario-and-run" class="md-nav__link">
+    Creating my own custom scenario and run
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating my own custom scenario and run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-configr-file-reference" class="md-nav__link">
+    Understanding the config.R file (reference)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-how-to-update-parameter-input-files-user-guide" class="md-nav__link">
+    Understanding how to update parameter input files (user guide)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-overview-of-parameter-inputs-reference" class="md-nav__link">
+    An overview of parameter inputs (reference)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-output-files" class="md-nav__link">
+    Understanding the output files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../userguide/" class="md-nav__link">
+        Parameter input files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpretoutput/" class="md-nav__link">
+        Overview of output files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary and reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-setup" class="md-nav__link">
+    Code Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-a-run-first-run" class="md-nav__link">
+    Starting a run (first run)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-my-own-custom-scenario-and-run" class="md-nav__link">
+    Creating my own custom scenario and run
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating my own custom scenario and run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-configr-file-reference" class="md-nav__link">
+    Understanding the config.R file (reference)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-how-to-update-parameter-input-files-user-guide" class="md-nav__link">
+    Understanding how to update parameter input files (user guide)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-overview-of-parameter-inputs-reference" class="md-nav__link">
+    An overview of parameter inputs (reference)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-output-files" class="md-nav__link">
+    Understanding the output files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Starting a run</h1>
+
+<h3 id="code-setup">Code Setup</h3>
+<p>The following steps will likely be necessary ahead of the first run:</p>
+<ul>
+<li>Clone the repository to a folder location of choice;</li>
+<li>Open R Studio;</li>
+<li>Open the R project of AmbModelOpen in the parent folder (double click <code>ambsim.Rproj</code>)<ul>
+<li>Check: when running<code>getwd()</code> from the R console, the working directory should now be set to the cloned folder location <code>AmbModelOpen</code>.</li>
+</ul>
+</li>
+<li>Open <code>packages.R</code> and run this file. This will likely throw errors as some (or all) packages are not installed.</li>
+<li>In <code>packages.R</code> set <code>flag_install_packages &lt;- TRUE</code> and add the relevant packages to be installed in <code>c_packagestoinstall</code> . For example, if <code>tidyverse</code> and <code>simmer</code> need installing, write <code>c_packagestoinstall &lt;- c("tidyverse","simmer")</code>. Run the code.</li>
+<li>Once all relevant packages have been installed explicitly set <code>flag_install_packages &lt;- FALSE</code> to make sure the programme does not reinstall each time it is run.</li>
+</ul>
+<h3 id="starting-a-run-first-run">Starting a run (first run)</h3>
+<p>To get an example run going, follow the following steps:</p>
+<ul>
+<li>For a first run, use the code files (<code>./src</code>) as given in the main branch as default (as there have already been set up to align with a given scenario).</li>
+<li>Open <code>main.R</code> . Use <code>mydate</code> to change the name of the subfolder to which the results should be saved (within <code>AmbModel/Output</code>). e.g. to name it "myexamplerun" set <code>mydate &lt;- "myexamplerun"</code>.</li>
+<li>The run has been set to use scenario folder <code>Fake_Data_2</code> for reading inputs (in <code>/parameter</code> subfolder).</li>
+<li>"Select all" in <code>main.R</code> and then press <code>run</code> or <code>Ctrl+R</code>. The run may take some minutes given it is set to run 10 replications, each covering a 15 day simulation time period for a whole ambulance trust footprint.</li>
+<li>After the run, some results will be printed to the Console or the Plots viewer. A range of relevant outputs will be saved to the folder selected above, e.g. <code>./Outputs/myexamplerun/</code> .</li>
+<li>This should have successfully concluded a run!</li>
+</ul>
+<h3 id="creating-my-own-custom-scenario-and-run">Creating my own custom scenario and run</h3>
+<p>The code was made with the expectation that an end-user would only potentially update:</p>
+<ul>
+<li><code>main.R</code> (lines 22-23)<ul>
+<li><code>scenario_folder</code> to specify the name of the parameter scenario folder to use (an existing subfolder of AmbModelOpen/parameters that the user worked on)</li>
+<li><code>mydate</code> to specify the name of the folder where results should be saved (will appear in AmbModelOpen/Outputs).</li>
+</ul>
+</li>
+<li><code>config.R</code> - a range of configurable settings</li>
+<li>a <code>/parameter</code> subfolder similar to <code>/parameter/Fake_Data_2</code> to change inputs on demand, supply, job cycle time components and pathway probabilities.<ul>
+<li>The user can create a copy of the <code>Fake_Data_2</code> folder (e.g. <code>Fake_Data_3</code>), update parameters as desired and run the model with <code>scenario_folder &lt;- "Fake_Data_3</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="understanding-the-configr-file-reference">Understanding the config.R file (reference)</h4>
+<p>See <a href="../config/">Optimised Model - User Settings (Config)</a> to understand further user settings in the <code>config.R</code> file.</p>
+<h4 id="understanding-how-to-update-parameter-input-files-user-guide">Understanding how to update parameter input files (user guide)</h4>
+<p>See <a href="../userguide/">User guide - Parameter input files</a> to understand the Scenario input files and when / how / if they get used via <code>Input.R</code> and in the DES model runs.</p>
+<h4 id="an-overview-of-parameter-inputs-reference">An overview of parameter inputs (reference)</h4>
+<p>See <a href="../inputs/">Optimised Model - Inputs</a> for an overview of Input use in the model (from Scenario input files).</p>
+<h3 id="understanding-the-output-files">Understanding the output files</h3>
+<p>An overview of output files is given in <a href="../interpretoutput/">Overview of output files</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+    
+  </body>
+</html>

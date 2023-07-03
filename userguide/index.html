@@ -1,0 +1,1336 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ambsim.com/userguide/">
+      
+      
+        <link rel="prev" href="../examplerun/">
+      
+      
+        <link rel="next" href="../interpretoutput/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>Parameter input files - AmbSim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parameter-input-files-for-demand-supply-jct" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AmbSim" class="md-header__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AmbSim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parameter input files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AmbSim" class="md-nav__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    AmbSim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem/" class="md-nav__link">
+        Problem Setting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Representative Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Representative Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chosenmethod/" class="md-nav__link">
+        Chosen method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Data Sources (Inputs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        Evidence and Insights (Assumptions)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Optimized Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Optimized Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        Model Build Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../illustrativequestions/" class="md-nav__link">
+        Illustrative questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        Repository Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inputs/" class="md-nav__link">
+        Inputs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        User Settings (Config)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Solution
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Solution
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          User guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examplerun/" class="md-nav__link">
+        Starting a run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Parameter input files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Parameter input files
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constituent-parameter-input-files-of-a-scenario-folder" class="md-nav__link">
+    Constituent parameter input files of a scenario folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-m_demand_cat2convxlsx" class="md-nav__link">
+    Input file 'm_demand_cat2conv.xlsx'
+  </a>
+  
+    <nav class="md-nav" aria-label="Input file 'm_demand_cat2conv.xlsx'">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-model-of-care-by-acuity" class="md-nav__link">
+    Provide the relative model of care by acuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-acuity" class="md-nav__link">
+    Provide the relative acuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-time-in-department-by-category" class="md-nav__link">
+    Provide the Time in Department by category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-conveyance-destination" class="md-nav__link">
+    Provide the relative Conveyance Destination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-direct-ed-demand-as-a-ratio-of-ambulance-conveyance-demand" class="md-nav__link">
+    Provide the direct ED demand as a ratio of ambulance conveyance demand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-ed-acuity-by-category-and-direct" class="md-nav__link">
+    Provide the relative ED acuity by Category (and Direct)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-jct_m_typexlsx" class="md-nav__link">
+    Input file 'JCT_m_type.xlsx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-jct_m_qxlsx" class="md-nav__link">
+    Input file 'JCT_m_q.xlsx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-jct_m_stylexlsx" class="md-nav__link">
+    Input file 'JCT_m_style.xlsx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-v_dnc_schedulexlsx" class="md-nav__link">
+    Input file 'v_DnC_schedule.xlsx'
+  </a>
+  
+    <nav class="md-nav" aria-label="Input file 'v_DnC_schedule.xlsx'">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sheet-controls" class="md-nav__link">
+    Sheet Controls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-demand-enforced" class="md-nav__link">
+    Sheet Demand-Enforced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-supply-enforced" class="md-nav__link">
+    Sheet Supply-Enforced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-demand-fully_custom" class="md-nav__link">
+    Sheet Demand - Fully_custom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-demand-as_components" class="md-nav__link">
+    Sheet Demand - As_components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-supply-fully_custom" class="md-nav__link">
+    Sheet Supply - Fully_custom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-supply-as_components" class="md-nav__link">
+    Sheet Supply - As_components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpretoutput/" class="md-nav__link">
+        Overview of output files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary and reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constituent-parameter-input-files-of-a-scenario-folder" class="md-nav__link">
+    Constituent parameter input files of a scenario folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-m_demand_cat2convxlsx" class="md-nav__link">
+    Input file 'm_demand_cat2conv.xlsx'
+  </a>
+  
+    <nav class="md-nav" aria-label="Input file 'm_demand_cat2conv.xlsx'">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-model-of-care-by-acuity" class="md-nav__link">
+    Provide the relative model of care by acuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-acuity" class="md-nav__link">
+    Provide the relative acuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-time-in-department-by-category" class="md-nav__link">
+    Provide the Time in Department by category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-conveyance-destination" class="md-nav__link">
+    Provide the relative Conveyance Destination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-direct-ed-demand-as-a-ratio-of-ambulance-conveyance-demand" class="md-nav__link">
+    Provide the direct ED demand as a ratio of ambulance conveyance demand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-relative-ed-acuity-by-category-and-direct" class="md-nav__link">
+    Provide the relative ED acuity by Category (and Direct)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-jct_m_typexlsx" class="md-nav__link">
+    Input file 'JCT_m_type.xlsx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-jct_m_qxlsx" class="md-nav__link">
+    Input file 'JCT_m_q.xlsx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-jct_m_stylexlsx" class="md-nav__link">
+    Input file 'JCT_m_style.xlsx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-file-v_dnc_schedulexlsx" class="md-nav__link">
+    Input file 'v_DnC_schedule.xlsx'
+  </a>
+  
+    <nav class="md-nav" aria-label="Input file 'v_DnC_schedule.xlsx'">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sheet-controls" class="md-nav__link">
+    Sheet Controls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-demand-enforced" class="md-nav__link">
+    Sheet Demand-Enforced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-supply-enforced" class="md-nav__link">
+    Sheet Supply-Enforced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-demand-fully_custom" class="md-nav__link">
+    Sheet Demand - Fully_custom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-demand-as_components" class="md-nav__link">
+    Sheet Demand - As_components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-supply-fully_custom" class="md-nav__link">
+    Sheet Supply - Fully_custom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-supply-as_components" class="md-nav__link">
+    Sheet Supply - As_components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="parameter-input-files-for-demand-supply-jct">Parameter Input files for demand, supply, JCT</h1>
+<p>All file based parameters should be updated in a newly created folder within <code>/parameters</code> .</p>
+<p>The folder <code>Fake_Data_2</code> can be copied and renamed (e.g. to <code>NewRun</code>). This gives a pre-filled starting point from which assumptions can be changed as deemed fit.</p>
+<p>To use this parameter folder, in <code>main.R</code> update <code>scenario_folder</code> as appropriate, i.e. <code>scenario_folder&lt;-"NewRun"</code>.</p>
+<p>Note that whether individual files and parameters within the folder are loaded and used in the DES model runs will depend on whether relevant flags or controls have been turned on (e.g. in <code>config.R</code>). This is highlighted below for the relevant sections.</p>
+<h2 id="constituent-parameter-input-files-of-a-scenario-folder">Constituent parameter input files of a scenario folder</h2>
+<p>The model expects the following parameter input files to be present in the folder:</p>
+<ul>
+<li><code>JCT_v_type.xlsx</code> - file to specify whether JCT components are set based on quantiles or stylistic (parametric) distributions.</li>
+<li><code>JCT_m_q.xlsx</code> - file that specifies the distributions for JCT components based on quantiles, by category and model of care.</li>
+<li><code>JCT_m_style.xlsx</code> - file that specifies the distributions for JCT components based on stylistic distributions (constant or lognormal).</li>
+<li><code>m_demand_cat2conv.xlsx</code> - file that specifies demand by category ; model of care by category ; time in A&amp;E department ; ED acuity by category or direct attendance; % conveyance to ED.</li>
+<li><code>v_DnC_schedule.xlsx</code> - file that specifies demand (ambulance, direct) and capacity (double staffed vehicles, ED) profiles over time.</li>
+</ul>
+<h2 id="input-file-m_demand_cat2convxlsx">Input file 'm_demand_cat2conv.xlsx'</h2>
+<p>This file allows for a series of inputs to be given, mostly related to relative distributions in demand.</p>
+<p>Tab <code>Checks</code> will perform some checks to ensure data is internally consistent and coherent. Flags will indicate if there are issues.</p>
+<p>Tab <code>Sources</code> can be used to log the origin of the data.</p>
+<p>Each other tab will allow the parametrisation of a different relation.</p>
+<h3 id="provide-the-relative-model-of-care-by-acuity">Provide the relative model of care by acuity</h3>
+<ul>
+<li>Navigate to sheet 'm_demand_cat2conv'</li>
+<li>In the matrix, provide for each Category the relative distribution of demand by model of care (SeeConvey vs SeeTreat vs Hear Treat).</li>
+<li><strong>Good to know</strong>:<ul>
+<li>Each row should add to 100%.</li>
+<li>Each value should be between 0-100%</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: AmbSYS ; daily ambulance collection</li>
+<li><strong>Run use</strong>: will be used; MUST define</li>
+</ul>
+<p><img alt="Screenshot of m_demand_cat2conv tab" src="../assets/file_cat2conv.PNG" /></p>
+<h3 id="provide-the-relative-acuity">Provide the relative acuity</h3>
+<ul>
+<li>Navigate to sheet 'v_demand_cat'</li>
+<li>In the matrix, provide the relative distribution of demand by category.</li>
+<li><strong>Good to know</strong>:<ul>
+<li>The column should add to 100%</li>
+<li>Each value should be between 0-100%</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: AmbSYS ; daily ambulance collection</li>
+<li><strong>Run use</strong>: will be used and MUST be defined <em>unless</em> in parameter file <code>v_DnC_schedule.xlsx</code> sheet <code>Controls</code>, the user has set <code>Should category distribution vary over time?</code> to <code>Yes</code>.</li>
+</ul>
+<p><img alt="Screenshot of v_demand_cat tab" src="../assets/file_vdemandcat.PNG" /></p>
+<h3 id="provide-the-time-in-department-by-category">Provide the Time in Department by category</h3>
+<ul>
+<li>Navigate to sheet 'v_LoS'</li>
+<li>In the matrix, provide the Time in Department by Category (hours).</li>
+<li><strong>Good to know</strong>:<ul>
+<li>Each value should be greater than 0.</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: ECDS time in department; ECDS-NACC linkage; judgemental</li>
+<li><strong>Run use</strong>: will be used only if in <code>config.R</code> file <code>flag_LoS_file&lt;-TRUE</code> . Otherwise model run will use as specified in <code>config.R</code> <code>T_AE</code> (<code>flag_scenarios=FALSE</code>) or <code>vec_T_AE</code> (<code>flag_scenarios=TRUE</code>).</li>
+</ul>
+<p><img alt="Screenshot of v_LoS tab" src="../assets/file_vlos.PNG" /></p>
+<h3 id="provide-the-relative-conveyance-destination">Provide the relative Conveyance Destination</h3>
+<ul>
+<li>Navigate to sheet 'v_conveydestination'</li>
+<li>In the matrix, provide the % of those conveyed that go to ED (as opposed to non-ED)</li>
+<li><strong>Good to know</strong>:<ul>
+<li>Each value should be between 0-100%</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: AmbSYS ; daily ambulance collection</li>
+<li><strong>Run use</strong>: will be used and MUST be defined.</li>
+</ul>
+<p><img alt="Screenshot of v_conveydestination tab" src="../assets/file_vconveydestination.PNG" /></p>
+<h3 id="provide-the-direct-ed-demand-as-a-ratio-of-ambulance-conveyance-demand">Provide the direct ED demand as a ratio of ambulance conveyance demand</h3>
+<ul>
+<li>Navigate to sheet 'v_direct_ratio'</li>
+<li>In the cell, provide the ratio of ED direct attendance relative to ambulance conveyance. That is, for each ambulance conveyance, how many ED direct attendances are there.</li>
+<li><strong>Good to know</strong>:<ul>
+<li>The value should be non-negative.</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: ECDS attendance source</li>
+<li><strong>Run use</strong>: will be used and MUST be defined <em>unless</em> in <code>config.R</code> the <code>flag_demand_schedule &lt;- TRUE</code>, in which case it will load the direct demand trendline from <code>v_DnC_schedule.xlsx</code>.</li>
+</ul>
+<h3 id="provide-the-relative-ed-acuity-by-category-and-direct">Provide the relative ED acuity by Category (and Direct)</h3>
+<ul>
+<li>Navigate to sheet 'v_direct_acuity'</li>
+<li>In the matrix, provide for each Category (and Direct) attendances, the relative distribution of ED acuity.</li>
+<li><strong>Good to know</strong>:<ul>
+<li>Each column should add to 100%</li>
+<li>Each value should be between 0-100%</li>
+<li>Acuity dictates priority of ED handover in the model (dealing with "competitive" nature of direct vs ambulance attendances for resource)</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: ECDS acuity, ECDS-NACC linkage, judgemental / calibration of handover delays</li>
+<li><strong>Run use</strong>: will be used and MUST be defined.</li>
+</ul>
+<p><img alt="Screenshot of v_cdirect_acuity tab" src="../assets/file_vdirectacuity.PNG" /></p>
+<h2 id="input-file-jct_m_typexlsx">Input file 'JCT_m_type.xlsx'</h2>
+<p>The period for different Job Cycle time components can be defined in two main ways:</p>
+<ul>
+<li>As Quantiles, i.e. establishing that X% of events occur under a timeperiod of Y, for a range of X values.</li>
+<li>As Style, i.e. as a stylised parametric distribution - currently this can be either a constant or a lognormal.</li>
+</ul>
+<p>This file requires the user to specify from the dropdown which type they would like to use for each JCT component. This will in turn dictate, for each respective JCT component, from which workbook the information will be loaded and applied during the run (`JCT_m_style.xlsx for Style ; JCT_m_q.xlsx for Quantiles).</p>
+<p>Header meaning:</p>
+<ul>
+<li>tts - time to scene</li>
+<li>tas - time at scene</li>
+<li>ttsi - time to site</li>
+<li>uph - unavoidable pre-handover (defining the minimum handover, independent and on top of that emerging from the model's handover ED resource request)</li>
+<li>ttc - time to clear</li>
+</ul>
+<p><img alt="Screenshot of JCT_v_type.xlsx" src="../assets/file_JCTvtype.PNG" /></p>
+<h2 id="input-file-jct_m_qxlsx">Input file 'JCT_m_q.xlsx'</h2>
+<ul>
+<li>Each sheet refers to a different JCT component.</li>
+<li>The configuration of each sheet is the same.<ul>
+<li>Yellow cells need filling.</li>
+<li>It expects the user to provide, in minutes, the {1,10,20,30,40,50,60,70,80,90,99}th %ile (q) of that component. This can be used by the DES model to sample time intervals from for each patient.</li>
+<li>Four columns are given, one per category.</li>
+<li>Row-wise (long-format), data can be given for 3 care models (CM=1 is see and convey; CM=2 is see and treat; CM=3 is hear and treat).</li>
+<li>In practice this means that separate distributions can be given by component x category x care model.</li>
+</ul>
+</li>
+<li><strong>Good to know</strong>:<ul>
+<li>Each value should de greater or equal to zero</li>
+<li>Each quantile vector q from 1%ile to 99%ile should be increasing in monotony - i.e. it would not make sense for the value to drop.</li>
+<li>In practice, CM=3 has no meaning for any of the JCT components (hence cells in blue in all sheets).</li>
+<li>In practice, CM=2 has no meaning beyond <code>timeatscene</code> (hence cells in blue in the following sheets)</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: JCT components informed by CADS / ADS ; model ambulance in model health system; judgemental.</li>
+<li><strong>Run use</strong>: will be used and MUST be defined <em>if</em> 'Quantiles' selected in <code>JCT_m_type.xlsx</code>.</li>
+</ul>
+<p><img alt="Screenshot of JCT_m_q.xlsx, sheet traveltoscene" src="../assets/file_JCTmq.PNG" /></p>
+<h2 id="input-file-jct_m_stylexlsx">Input file 'JCT_m_style.xlsx'</h2>
+<ul>
+<li>
+<p>Each of the first five sheets refers to a different JCT component. </p>
+</li>
+<li>
+<p>The configuration of those sheets is the same.</p>
+<ul>
+<li>Yellow cells can be filled as needed.</li>
+<li>The purpose of each sheet is to parametrise the distribution of that JCT component based on a parametric distribution, via a 'param' vector. Currently, the following two have been implemented and would be recognised by the DES model (could be expanded):<ul>
+<li>'rlnorm' - lognormal</li>
+<li>'cons' - constant (fixed)</li>
+</ul>
+</li>
+<li>'param' specification allows for 5 values, these should be used as follows (see also table below):<ul>
+<li>Use param5 to choose the distribution from the dropdown (rlnorm or cons)</li>
+<li>If param5 is 'rlnorm':<ul>
+<li>param1 is the logmean</li>
+<li>param2 is the logsd</li>
+<li>param3,4 ignored</li>
+</ul>
+</li>
+<li>If param5 is 'cons':<ul>
+<li>param1 is the constant value / mean</li>
+<li>param2,3,4 is ignored</li>
+</ul>
+</li>
+<li>The way parameters 1-4 are used is meant to be aligned with their use in packages such as <a href="https://www.rdocumentation.org/packages/MASS/versions/7.3-58.3/topics/fitdistr">fitdistr</a>.</li>
+</ul>
+</li>
+<li>
+<p>Four columns are given, one per category. Row-wise (long-format), param is given for 3 care models (CM=1 is see and convey; CM=2 is see and treat; CM=3 is hear and treat). In practice this means that separate param specification are given by component x category x care model. Param for all relevant JCT components (sheet) x Care Model (row) x Category (column) should be specified.</p>
+</li>
+<li>
+<p>Sheet <code>Checks</code> allows for some interpretation of the distributions - namely, via plotting and by showing what would be the expected mean and standard deviation of the resulting sample distribution.</p>
+</li>
+<li>
+<p>Sheet <code>simple parametrisation</code> is a simple "aid" page in case the user would like to do the inverse operation, i.e. input a given observed sample mean and standard deviation and derive that the relevant parameters (e.g. logmean and logsd for the lognormal distribution) would be. This is at a very simple level. For more advanced distribution fitting from empirical data (either histogram-like or quantile-like, see auxiliary R script <code>utility_stylised.R</code>).</p>
+</li>
+<li>
+<p>Sheet <code>Ref</code> provides some lookups, namely the meaning of the parameters for a given distribution (See Table below).</p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">param</th>
+<th align="center">constant(mean)</th>
+<th align="center">lognormal(logmean,logsd)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">mean</td>
+<td align="center">logmean</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">n/a</td>
+<td align="center">logsd</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">n/a</td>
+<td align="center">n/a</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">n/a</td>
+<td align="center">n/a</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">cons</td>
+<td align="center">rlnorm</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Good to know</strong>:<ul>
+<li>In practice, CM=3 has no meaning for any of the JCT components (hence cells not in yellow).</li>
+<li>In practice, CM=2 has no meaning beyond <code>timeatscene</code> (hence cells not in yellow in the following sheets)</li>
+<li><code>Checks</code> can be used to visualise resulting distributions ; <code>simple parametrisation</code> can be used to derive a rlnorm(logmean,logsd) from a desired sample mean and standard deviation; <code>utility_stylised.R</code> and its libraries can be used for more detailed investigations into appropriate distribution fitting.</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>: JCT components informed by CADS / ADS ; model ambulance in model health system; judgemental.</li>
+<li><strong>Run use</strong>: will be used and MUST be defined <em>if</em> 'Style' selected in <code>JCT_m_type.xlsx</code>.</li>
+</ul>
+<p><img alt="Screenshot of JCT_m_style.xlsx, sheet traveltoscene" src="../assets/file_JCTmstyle.PNG" /></p>
+<h2 id="input-file-v_dnc_schedulexlsx">Input file 'v_DnC_schedule.xlsx'</h2>
+<p>This file is used to give information on the demand and supply profiles. These are given as a time-series (time unit hour).</p>
+<p>The information read and used by the DES model is that given in:</p>
+<ul>
+<li>Demand-Enforced</li>
+<li>Supply-Enforced</li>
+</ul>
+<p>A couple of parameters are also read into R from 'Controls'.</p>
+<p>Other sheets are largely auxiliaries to help the user populate those two main sheets.</p>
+<h3 id="sheet-controls">Sheet <code>Controls</code></h3>
+<p>Largely, this sheets controls how <code>Demand-Enforced</code> and <code>Supply-Enforced</code> should be specified based on the background sheets.</p>
+<ul>
+<li>
+<p><strong>Controls - Demand</strong></p>
+<ul>
+<li><em>Which profile: ' As_components' vs 'Fully custom'</em> : choose whether ambulance incident demand should come from sheet <code>Demand - As_components</code> or from <code>Demand - Fully_custom</code></li>
+<li><em>Which profile: 'uplift from ambulance incidents' vs 'Fully custom'</em> : choose whether direct ED demand should come from sheet <code>Demand - As_components</code> or from <code>Demand - Fully_custom</code> or be a simple scalar applied to the ambulance incident demand</li>
+<li><em>Uplift factor</em>: Specify the uplift factor that should be used, if enabled. i.e. for every ambulance incident (upstream), how many direct ED attendances.</li>
+<li><code>Should category distribution vary over time?</code>: choose whether to ignore or not the category distribution over time in the DES model demand generator. If <code>Yes</code>, information in columns C1,C2,C3,C4 of <code>Demand-Enforced</code> will be leveraged in the DES model. If <code>No</code>, information in those columns will be ignored and instead the data in 'm_demand_cat2conv.xlsx' <code>v_demand_cat</code> (time-invariant) will be used.</li>
+</ul>
+</li>
+<li>
+<p><strong>Controls - Supply</strong></p>
+<ul>
+<li>
+<ul>
+<li><em>Which profile: ' As_components' vs 'Fully custom'</em> : choose whether RSV and ED supply should come from sheet <code>Supply - As_components</code> or from <code>Supply - Fully_custom</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Screenshot of v_DnC_schedule.xlsx, sheet Controls" src="../assets/file_dnc_controls.PNG" /></p>
+<h3 id="sheet-demand-enforced">Sheet <code>Demand-Enforced</code></h3>
+<p><code>Demand-Enforced</code> is ingested into the DES model to inform demand profiles. Its columns are filled based on information given in Controls and based on the <code>Demand _ [...]</code> auxiliary sheets.</p>
+<ul>
+<li>
+<p><strong>Meaning:</strong></p>
+<ul>
+<li>Day - day of the simulation</li>
+<li>Hour - hour of the day in the simulation</li>
+<li>Time - time in hours, starting at 0</li>
+<li>Incident_Demand - incident demand in that hour (rate)</li>
+<li>Direct_Demand - direct ED demand in that hour (rate)</li>
+<li>C1, C2, C3, C4 - the relative portion of incident demand by category. These four columns should add to 100%</li>
+</ul>
+</li>
+<li>
+<p><strong>Good to know</strong>:</p>
+<ul>
+<li>Check that each time series makes sense, based on information given in <code>Control</code> and in the <code>Demand _ [...]</code> auxiliary sheets.</li>
+<li>Check that <code>config.R</code> is set to ingest and leverage these, if so desired.</li>
+</ul>
+</li>
+<li><strong>Run use</strong>: will be used only if <code>flag_demand_schedule &lt;- TRUE</code> in <code>config.R</code> ; relative demand by category (C1,C2,C3,C4) only used if activated in the <code>Control</code> sheet of the same workbook.</li>
+</ul>
+<h3 id="sheet-supply-enforced">Sheet <code>Supply-Enforced</code></h3>
+<p><code>Supply-Enforced</code> is ingested into the DES model to inform supply profiles. Its columns are filled based on information given in Controls and based on the <code>Supply _ [...]</code> auxiliary sheets.</p>
+<ul>
+<li>
+<p><strong>Meaning</strong>:</p>
+<ul>
+<li>Day - day of the simulation</li>
+<li>Hour - hour of the day in the simulation</li>
+<li>Time - time in hours, starting at 0</li>
+<li>DSV_Enforced - DSV vehicles on-duty</li>
+<li>ED_Enforced_torescale - a relative profile of ED capacity over time, the mean value of which is set in the <code>config.R</code> parameter <code>n_AEbays</code> (by standardising / rescaling the former)</li>
+<li>Incident_Demand - (just used for plotting)</li>
+<li>ED_enforced_plot_rescale - (just used for plotting)</li>
+</ul>
+</li>
+<li>
+<p><strong>Good to know</strong>:</p>
+<ul>
+<li>Check that each time series makes sense, based on information given in <code>Control</code> and in the <code>Supply _ [...]</code> auxiliary sheets.</li>
+<li>Check that <code>config.R</code> is set to ingest and leverage these, if so desired.</li>
+</ul>
+</li>
+<li><strong>Run use</strong>: DSV schedule will be used only if <code>flag_supply_schedule &lt;- TRUE</code> and <code>flag_supply_schedule_file &lt;- TRUE</code> in <code>config.R</code> . ED schedule will be used only if  <code>flag_supply_schedule &lt;- TRUE</code> and <code>flag_supply_schedule_file_hED &lt;- TRUE</code> in <code>config.R</code> </li>
+</ul>
+<h3 id="sheet-demand-fully_custom">Sheet <code>Demand - Fully_custom</code></h3>
+<ul>
+<li>Fill in information in the yellow cells.</li>
+<li><strong>Good to know</strong>:<ul>
+<li>Column <code>Check</code> flags if columns C1, C2, C3, C4 add to 100%.</li>
+<li>If this information should be used, check that <code>Controls</code> is currectly set up and that information is flowing into <code>Demand-Enforced</code>. See also the <code>Good to Know</code> from the <code>Demand-Enforced section</code>.</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>:<ul>
+<li>For incident demand: ADS; CADS; daily ambulance collection</li>
+<li>For direct ED demand and ratio: ECDS (attendances; admission source)</li>
+</ul>
+</li>
+</ul>
+<h3 id="sheet-demand-as_components">Sheet <code>Demand - As_components</code></h3>
+<ul>
+<li>Fill in information in the yellow cells.</li>
+<li>For ambulance incident demand:<ul>
+<li>Fill the hourly demand component (this will be normalised)</li>
+<li>Fill the weekly demand component (this will be normalised)</li>
+<li>Fill the week on week demand component (absolute)</li>
+<li>Fill the scaling factor</li>
+<li>These factors are applied in a multiplicative way to generate a profile (column Incident_Demand and visualisations).</li>
+</ul>
+</li>
+<li>
+<p>For Direct ED demand:</p>
+<ul>
+<li>Fill the hourly demand component (this will be normalised)</li>
+<li>Fill the weekly demand component (this will be normalised)</li>
+<li>Fill the week on week demand component (will be normalised)</li>
+<li>The absolute scaling is dictated based in the <code>uplift_factor</code> in <code>Controls</code> and the aggregate ambulance demand.</li>
+<li>These factors are applied in a multiplicative way to generate a profile (column DirectED_Demand_Demand and visualisations).</li>
+</ul>
+</li>
+<li>
+<p><strong>Good to know</strong>:</p>
+<ul>
+<li>If this information should be used, check that <code>Controls</code> is currectly set up and that information is flowing into <code>Demand-Enforced</code>. See also the <code>Good to Know</code> from the <code>Demand-Enforced section</code>.</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>:<ul>
+<li>For incident demand: ADS; CADS; daily ambulance collection</li>
+<li>For direct ED demand and ratio: ECDS (attendances; admission source)</li>
+</ul>
+</li>
+</ul>
+<h3 id="sheet-supply-fully_custom">Sheet <code>Supply - Fully_custom</code></h3>
+<ul>
+<li>Fill in information in the yellow cells.</li>
+<li><strong>Good to know</strong>:<ul>
+<li>If this information should be used, check that <code>Controls</code> is currectly set up and that information is flowing into <code>Demand-Enforced</code>. See also the <code>Good to Know</code> from the <code>Demand-Enforced section</code>.</li>
+</ul>
+</li>
+<li><strong>Suggested sources</strong>:<ul>
+<li>For DSV supply: NACC or judgemental or based on rotas</li>
+<li>For ED supply: judgemental or based on rotas; SEDIT tool (consultants, nurses, bays)</li>
+</ul>
+</li>
+</ul>
+<h3 id="sheet-supply-as_components">Sheet <code>Supply - As_components</code></h3>
+<ul>
+<li>Fill in information in the yellow cells.</li>
+<li>For double-staffed vehicle supply:<ul>
+<li>Fill the hourly capacity component (this will be normalised)</li>
+<li>Fill the weekly capacity component (this will be normalised)</li>
+<li>Fill the week on week on week capacity in vehicle hours (absolute)</li>
+<li>Fill the scaling factor</li>
+<li>These factors are applied in a multiplicative way to generate a profile (column DSV_Supply and visualisations).</li>
+</ul>
+</li>
+<li>
+<p>For ED supply:</p>
+<ul>
+<li>Fill the hourly demand component (this will be normalised)</li>
+<li>Fill the weekly demand component (this will be normalised)</li>
+<li>Fill the week on week demand component (will be normalised)</li>
+<li>These factors are applied in a multiplicative way to generate a profile (column <code>ED Supply to be rescaled</code> and visualisations).</li>
+<li>The absolute scaling is not relevant. It will be dictated by the <code>config.R</code> parameter on average hourly A&amp;E bay supply <code>n_AEbays</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Good to know</strong>:</p>
+<ul>
+<li>If this information should be used, check that <code>Controls</code> is currectly set up and that information is flowing into <code>Supply-Enforced</code>. See also the <code>Good to Know</code> from the <code>Supply-Enforced section</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Suggested sources</strong>:</p>
+<ul>
+<li>For DSV supply: NACC or judgemental or based on rotas</li>
+<li>For ED supply: judgemental or based on rotas; SEDIT tool (consultants, nurses, bays)</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+    
+  </body>
+</html>

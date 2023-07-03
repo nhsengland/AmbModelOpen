@@ -1,0 +1,781 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ambsim.com/">
+      
+      
+      
+        <link rel="next" href="problem/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>AmbSim</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#understanding-the-problem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AmbSim" class="md-header__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AmbSim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AmbSim" class="md-nav__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    AmbSim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-of-the-specific-simulation" class="md-nav__link">
+    Context of the Specific Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Context of the Specific Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understandingaddressing-the-problem" class="md-nav__link">
+    Understanding/Addressing the Problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement-to-be-modelled" class="md-nav__link">
+    Problem Statement to be Modelled
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodological-approach-discrete-event-simulation" class="md-nav__link">
+    Methodological Approach - Discrete Event Simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-design" class="md-nav__link">
+    Model Design
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="problem/" class="md-nav__link">
+        Problem Setting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Representative Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Representative Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chosenmethod/" class="md-nav__link">
+        Chosen method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data/" class="md-nav__link">
+        Data Sources (Inputs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="insights/" class="md-nav__link">
+        Evidence and Insights (Assumptions)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Optimized Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Optimized Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run/" class="md-nav__link">
+        Model Build Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="illustrativequestions/" class="md-nav__link">
+        Illustrative questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="structure/" class="md-nav__link">
+        Repository Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="inputs/" class="md-nav__link">
+        Inputs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="config/" class="md-nav__link">
+        User Settings (Config)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Solution
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Solution
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="results/" class="md-nav__link">
+        Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          User guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examplerun/" class="md-nav__link">
+        Starting a run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="userguide/" class="md-nav__link">
+        Parameter input files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interpretoutput/" class="md-nav__link">
+        Overview of output files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary/" class="md-nav__link">
+        Glossary and reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-of-the-specific-simulation" class="md-nav__link">
+    Context of the Specific Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Context of the Specific Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understandingaddressing-the-problem" class="md-nav__link">
+    Understanding/Addressing the Problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement-to-be-modelled" class="md-nav__link">
+    Problem Statement to be Modelled
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodological-approach-discrete-event-simulation" class="md-nav__link">
+    Methodological Approach - Discrete Event Simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-design" class="md-nav__link">
+    Model Design
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="understanding-the-problem">Understanding the Problem</h1>
+<p>This documentation covers the public facing outputs of a discrete event simulation focussing on simulating the ambualnce job cycle time.  The work has been made open to support:</p>
+<ul>
+<li>Reuse of the code-base by an analyst with access to ambulance data.  In this situation the code should be forked and adapted locally to ingest the trust specific data and trajectory.   We have attempted to include enough information around the parameters and inputs used to allow this refactoring to new data. </li>
+<li>An exmple of using the open R library RSimmer for a healthcare discrete event simulation.  We have tried to include enough information around the approach and considerations to be useful for wider simulations. </li>
+</ul>
+<h2 id="context-of-the-specific-simulation">Context of the Specific Simulation</h2>
+<p>Ambulance handover problems have been dominating the Urgent &amp; Emergency Care (UEC) space. There are currently large handover delays, with a lot of people waiting a long time to be admitted into the emergency department (ED). </p>
+<p float="left">
+    <img src="./assets/catmedian.png" alt="Source: NHS England Ambulance Quality Indicators: https://www.england.nhs.uk/statistics/statistical-work-areas/ambulance-quality-indicators/" width="49%"/>
+    <img src="./assets/handoverw2122.png" alt="Source: NHS England Urgent and Emergency Care Daily Situation Reports: https://www.england.nhs.uk/statistics/statistical-work-areas/uec-sitrep/" width="49%"/>
+</p>
+
+<h3 id="understandingaddressing-the-problem">Understanding/Addressing the Problem</h3>
+<p>When a call is made, availability to respond to it depends namely on the number of on-duty ambulance fleet, the on-duty workforce but also the instantaneous availability to be allocated to that incoming call. This in turn depends on when on-duty ambulances can be cleared from previous jobs (finish their job cycle time from allocation to clearance). Handover delays are leading to more ambulances queueing at the hospital site and an increase in job cycle time, which affects their availability for subsequent jobs.</p>
+<p>Much of it may not be in the sole direct gift of the ambulance service, as ability to handover depends on A&amp;E availability for clinical handover, which may in turn be affected by, successively: A&amp;E occupancy, bed availability in admitted patient care, inpatient discharge (to home, social care, …).
+It is useful though to better understand the ambulance setting and how different factors affect performance. Namely, the relation between handover delays and response times, the impact of resourcing models, changes to job cycle time or fluctuations in demand.</p>
+<h2 id="problem-statement-to-be-modelled">Problem Statement to be Modelled</h2>
+<p>In the context of ambulance to emergency department handover delays and elevated ambulance response times, build a prototype discrete event simulation model (DES) for the ambulance setting to help understand the potential impacts of:</p>
+<ul>
+<li>resourcing interventions</li>
+<li>factors such as demand, job cycle time components, vehicle capacity</li>
+</ul>
+<p>on:</p>
+<ul>
+<li>ambulances queueing at hospital site</li>
+<li>calls queued</li>
+<li>call response times</li>
+<li>handover times</li>
+</ul>
+<p>An overview of the response time problem restated as a queue is given below. Queues for ambulances to handover at the site can also emerge.</p>
+<p align="center">
+    <img src="./assets/responsetime_as_queue.PNG" alt="" width="1000"/>
+</p>
+
+<h2 id="methodological-approach-discrete-event-simulation">Methodological Approach - Discrete Event Simulation</h2>
+<p>As the dynamics to be modelled are flows and resource utilisation, a system model is required.  As we are interested in understanding the profiles tails and not just the medians and expected to include individual effects in the model (e.g. reneging and queue prioritisation depending on individual characteristic) a Discrete Event Simulation (DES) is considered.  This approach models systems as networks of queues and activities, where state changes in the system occur at discrete points embedded in continuous time.  This means that many system events can happen in a single time point, one after another, followed by many time points where no update occurs.  the objects in the system are distinct individuals, each possessing characteristics that determine what happens to that individual, and the activity durations are sampled for each individual from probability distributions.  Discrete Event Simulations are essentially stochastic in nature.  </p>
+<p>This method has the advantage of intuitive and visual checks to the logic model, scenario testing and granular modelling.  The restrictions of DES are mainly around the simplified model of the system not picking up dynamic behaviours.  This means that absolute values should not be used for direct comparisons with reality but instead to inform a discussion of the underlying causalities and impacts of changes on the system.</p>
+<p>Discrete event simulations have been widely used for a long time across a variety of industries including queuing logic (e.g. airport customs), assembly lines (e.g. return on investment from prioritising one product line over another), and resource management (e.g. operating theatres).  </p>
+<p>Other techniques that could be considered for this work are: queuing theory; Markov chains; process mapping; or system dynamics.</p>
+<h2 id="model-design">Model Design</h2>
+<p>A successful system model needs to have:</p>
+<ul>
+<li>Well-defined scope</li>
+<li>Available Data flows at the right level of granularity</li>
+<li>Known unknowns with evidenced-based assumptions</li>
+<li>Separate validation metrics</li>
+<li>Benchmarks if possible</li>
+</ul>
+<p>In order to build a model that will have longevity, can be worked on by multiple individuals and where components can be reused in future projects we have pushed for a version controlled, free and open source solution.  </p>
+<p>A key learning from previous related projects is that there is often a strong desire to jump from the problem to the solution.  Instead we must ensure to work through two additional stages of considering a representative model and creating from this a simplified / optimized model to generate the solution from. </p>
+<p align="center">
+    <img src="./assets/ModelDevelopment.png" alt="Four steps for any model" width="600"/>
+</p>
+
+<p>The rest of this documentation will be split across these four steps. </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.a51614de.min.js"></script>
+      
+    
+  </body>
+</html>

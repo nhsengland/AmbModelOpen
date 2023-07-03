@@ -1,0 +1,1480 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ambsim.com/interpretoutput/">
+      
+      
+        <link rel="prev" href="../userguide/">
+      
+      
+        <link rel="next" href="../glossary/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>Overview of output files - AmbSim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#output-patient-pathway-simmer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AmbSim" class="md-header__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AmbSim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview of output files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AmbSim" class="md-nav__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    AmbSim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem/" class="md-nav__link">
+        Problem Setting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Representative Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Representative Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chosenmethod/" class="md-nav__link">
+        Chosen method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Data Sources (Inputs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        Evidence and Insights (Assumptions)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Optimized Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Optimized Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        Model Build Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../illustrativequestions/" class="md-nav__link">
+        Illustrative questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        Repository Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inputs/" class="md-nav__link">
+        Inputs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        User Settings (Config)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Solution
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Solution
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          User guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examplerun/" class="md-nav__link">
+        Starting a run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../userguide/" class="md-nav__link">
+        Parameter input files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview of output files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Overview of output files
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#output-patient-pathway-simmer" class="md-nav__link">
+    Output - patient pathway (Simmer)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-logs" class="md-nav__link">
+    Output - logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Output - logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-log-of-arrivals" class="md-nav__link">
+    Output - log of arrivals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-log-of-resources" class="md-nav__link">
+    Output - log of resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-log-of-attributes" class="md-nav__link">
+    Output - log of attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-kpi-files" class="md-nav__link">
+    Output - KPI files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-plot-files" class="md-nav__link">
+    Output - plot files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary and reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#output-patient-pathway-simmer" class="md-nav__link">
+    Output - patient pathway (Simmer)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-logs" class="md-nav__link">
+    Output - logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Output - logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-log-of-arrivals" class="md-nav__link">
+    Output - log of arrivals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-log-of-resources" class="md-nav__link">
+    Output - log of resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-log-of-attributes" class="md-nav__link">
+    Output - log of attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-kpi-files" class="md-nav__link">
+    Output - KPI files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-plot-files" class="md-nav__link">
+    Output - plot files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Overview of output files</h1>
+
+<p>This section explains the meaning of the output files.</p>
+<h2 id="output-patient-pathway-simmer">Output - patient pathway (Simmer)</h2>
+<h2 id="output-logs">Output - logs</h2>
+<p>Full simulation logs are saved if <code>flag_savedata_fulllogs &lt;- TRUE</code> in <code>config.R</code>.</p>
+<p>These will be large if used for very large simulations (e.g. high number of replications / volume of arrivals / attributes) so if not directly needed at this granularity, could be turned off.</p>
+<table>
+<thead>
+<tr>
+<th align="center">File</th>
+<th align="center"></th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">log_arrivals</td>
+<td align="center"></td>
+<td align="center">A log of arrivals (demand). Both ambulance and direct. Each row is an arrival.</td>
+</tr>
+<tr>
+<td align="center">log_resources</td>
+<td align="center"></td>
+<td align="center">An event log of resource use. Both double staffed vehicles and ED. A new row signals a timestamp in which either the queue, occupancy or capacity of a resource changed.</td>
+</tr>
+<tr>
+<td align="center">log_attributes_w</td>
+<td align="center"></td>
+<td align="center">A log of arrivals and their various characteristics and notable timestamps. Attributes saved are defined in the trajectory.R specification.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output-log-of-arrivals">Output - log of arrivals</h3>
+<p>Variables in <code>log_arrivals.xlsx</code>.</p>
+<table>
+<thead>
+<tr>
+<th align="center">File</th>
+<th align="center"></th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">name</td>
+<td align="center"></td>
+<td align="center">Unique patient identifier.</td>
+</tr>
+<tr>
+<td align="center">start_time</td>
+<td align="center"></td>
+<td align="center">Start of activity.</td>
+</tr>
+<tr>
+<td align="center">end_time</td>
+<td align="center"></td>
+<td align="center">End of activity (model exit)</td>
+</tr>
+<tr>
+<td align="center">activity_time</td>
+<td align="center"></td>
+<td align="center">Difference between start and end time</td>
+</tr>
+<tr>
+<td align="center">finished</td>
+<td align="center"></td>
+<td align="center">Flag on whether activity had finished by the end of the simulation</td>
+</tr>
+<tr>
+<td align="center">replication</td>
+<td align="center"></td>
+<td align="center">The model run replication number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output-log-of-resources">Output - log of resources</h3>
+<p>Variables in <code>log_resources.xlsx</code>.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Variable</th>
+<th align="center"></th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">resource</td>
+<td align="center"></td>
+<td align="center">Resource (server) type.</td>
+</tr>
+<tr>
+<td align="center">time</td>
+<td align="center"></td>
+<td align="center">Timestamp marking change in utilisation profile from previous row's characteristics</td>
+</tr>
+<tr>
+<td align="center">server</td>
+<td align="center"></td>
+<td align="center">Number patients in server</td>
+</tr>
+<tr>
+<td align="center">queue</td>
+<td align="center"></td>
+<td align="center">Number patients in queue for that server</td>
+</tr>
+<tr>
+<td align="center">capacity</td>
+<td align="center"></td>
+<td align="center">Capacity of that server</td>
+</tr>
+<tr>
+<td align="center">queue_size</td>
+<td align="center"></td>
+<td align="center">Maximum allowed queue size of that server (#NUM means infinite)</td>
+</tr>
+<tr>
+<td align="center">system</td>
+<td align="center"></td>
+<td align="center">Number patients in server system (in queue or in server itself)</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center"></td>
+<td align="center">Maximum allowed system (queue+server) size (#NUM means infinite)</td>
+</tr>
+<tr>
+<td align="center">replication</td>
+<td align="center"></td>
+<td align="center">The model run replication number</td>
+</tr>
+<tr>
+<td align="center">id</td>
+<td align="center"></td>
+<td align="center">n/a</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output-log-of-attributes">Output - log of attributes</h3>
+<p>Variables in <code>log_attributes_w.xlsx</code>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">name</td>
+<td align="left">Unique patient identifier (prefix "PatientD_" if Direct/Walk-In)</td>
+</tr>
+<tr>
+<td align="left">replication</td>
+<td align="left">The model replication number</td>
+</tr>
+<tr>
+<td align="left">id</td>
+<td align="left">nan</td>
+</tr>
+<tr>
+<td align="left">Cat</td>
+<td align="left">The ambulance category (1,2,3,4). Will be blank for Direct/Walk-In.</td>
+</tr>
+<tr>
+<td align="left">Convey</td>
+<td align="left">The care model (1=S&amp;C ; 2=S&T; 3=H&amp;T). Will be blank for Direct/Walk-In.</td>
+</tr>
+<tr>
+<td align="left">T_timetoscene</td>
+<td align="left">The sampled time to scene interval (seconds)</td>
+</tr>
+<tr>
+<td align="left">T_timeatscene</td>
+<td align="left">The sampled time at scene interval (seconds)</td>
+</tr>
+<tr>
+<td align="left">T_timetosite</td>
+<td align="left">The sampled time to site interval (seconds)</td>
+</tr>
+<tr>
+<td align="left">T_unavprehand</td>
+<td align="left">The sampled unavailable pre-handover time interval (seconds)</td>
+</tr>
+<tr>
+<td align="left">T_timetoclear</td>
+<td align="left">The sampled time to clear interval (seconds)</td>
+</tr>
+<tr>
+<td align="left">t_Rclockstart</td>
+<td align="left">The timestamp of response time clock start (here same as arrival)</td>
+</tr>
+<tr>
+<td align="left">n_resources_allocate</td>
+<td align="left">The sampled number of resources to allocate.</td>
+</tr>
+<tr>
+<td align="left">n_resources_arrive</td>
+<td align="left">The sampled number of resources to arrive at site.</td>
+</tr>
+<tr>
+<td align="left">t_ambulanceseized</td>
+<td align="left">The timestamp at which an ambulance could be seized / allocated.</td>
+</tr>
+<tr>
+<td align="left">t_hospitalarrival</td>
+<td align="left">The timestamp of hospital arrival.</td>
+</tr>
+<tr>
+<td align="left">Acuity</td>
+<td align="left">The sampled acuity (1=highest/resus ; 5 = lowest/minor)</td>
+</tr>
+<tr>
+<td align="left">LoS</td>
+<td align="left">Defined time in A&amp;E department.</td>
+</tr>
+<tr>
+<td align="left">t_EDhandover</td>
+<td align="left">The timestamp of ED handover</td>
+</tr>
+<tr>
+<td align="left">t_Rclockstop</td>
+<td align="left">The timestamp of response time clock stop / arrival at scene</td>
+</tr>
+<tr>
+<td align="left">Done</td>
+<td align="left">Indication of whether the activity is done by the endo f the simulation and how (1=S&amp;C ; 2=S&amp;T ; 3=H&T; 0=Direct; blank means not finished)</td>
+</tr>
+<tr>
+<td align="left">t_JCTend</td>
+<td align="left">The timestamp of the job cycle time end (ambulance perspective)</td>
+</tr>
+<tr>
+<td align="left">ConveyDestED</td>
+<td align="left">The conveyance destination</td>
+</tr>
+<tr>
+<td align="left">t_ambclear</td>
+<td align="left">The timestamp the ambulance cleared</td>
+</tr>
+<tr>
+<td align="left">t_EDclockstop</td>
+<td align="left">The timestamp of ED clock stop (end of time in A&amp;E)</td>
+</tr>
+<tr>
+<td align="left">T_allocate</td>
+<td align="left">The resulting time to allocate interval (seconds) = t_ambulanceseized - t_Rclockstart</td>
+</tr>
+<tr>
+<td align="left">T_prehandover</td>
+<td align="left">The resulting time to handover interval (seconds)  = t_Edhandover - t_hospitalarrival</td>
+</tr>
+<tr>
+<td align="left">T_JCT</td>
+<td align="left">The resulting total JCT time interval (seconds) = t_JCTend - t_Rclockstart (this differs from a more classic definition that excludes time from call connect to allocate as till that point no resource has been on the job)</td>
+</tr>
+<tr>
+<td align="left">Kp_Tresponsetime</td>
+<td align="left">The resulting responde time interval (seconds) = t_Rclockstop - t_Rclockstart</td>
+</tr>
+<tr>
+<td align="left">T_ED</td>
+<td align="left">The time in ED interval (seconds) = t_Edclockstop - t_Edhandover</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-kpi-files">Output - KPI files</h2>
+<p>Overall (simulation time) KPIs are saved if <code>flag_savedata_overallKPIs &lt;- TRUE</code> in <code>config.R</code>.</p>
+<p>Step-wise (by steps of simulation time) KPIs are saved if <code>flag_savedata_stepwiseKPIs &lt;- TRUE</code> in <code>config.R</code>.</p>
+<p>Contrary to the full logs, these files save more post-processed KPIs (though all resulting from those two logs).</p>
+<p><strong>KPIs</strong> include:</p>
+<ul>
+<li>Response times (Cat1, 2, 3, 4) - mean and 90th percentile</li>
+<li>Handover delays 30+ (%)</li>
+<li>Handover delays 60+ (%)</li>
+<li>Total time lost to handover delays (TLAHD)</li>
+<li>Total job cycle time (JCT)</li>
+<li>Double crewed ambulance (DCA) time  - mean, sd</li>
+<li>Time to allocate - mean, sd</li>
+<li>Call queue (queueing for an ambulance)</li>
+<li>Site queue (queueing for ED)</li>
+<li>Resource utilisation (%) - mean, sd</li>
+</ul>
+<p><strong>Replication or batch:</strong> Some files give results "by replication" while others summarise these further "across replications" ("batch"). This is indicated in the table below.</p>
+<p><strong>If batch - replication aggregate or flat:</strong> In some cases, this "batch" KPI is derived by considering all arrivals regardless of replication ("flat"). In others, the batch KPI is found by first calculating the KPI per replication and then finding the mean and standard deviation of this KPI among replications ("aggregate").</p>
+<p><strong>Stepwise:</strong> Some KPIs are calculated for different steps (e.g. days, time windows) of the simulation window while other times they are calculated for the overall simulation time.</p>
+<p><strong>Disaggregations:</strong> Where certain disaggregations were used, this is indicated (e.g. category for response times ; care model for time to allocate; resource type for utilisation; etc)</p>
+<p>An overview of the meaning of KPI output files is given below (navigate rightwards in the table to see all columns).</p>
+<table>
+<thead>
+<tr>
+<th align="left">Filename</th>
+<th align="left">Description</th>
+<th align="left">KPI theme</th>
+<th align="left">KPIs</th>
+<th align="left">Statistical measures</th>
+<th align="left">Replication or batch</th>
+<th align="left">If batch - replication aggregate or flat</th>
+<th align="left">Stepwise</th>
+<th align="left">Disaggregations</th>
+<th align="right">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">row.xlsx</td>
+<td align="left">Log of what-if levers in this scenario</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">Batch</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">df_scenarios.xlsx</td>
+<td align="left">Log of what-if levels across scenarios</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">Scenario</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_DCAtime.xlsx</td>
+<td align="left">Double-crewed ambulance time</td>
+<td align="left">DCA time</td>
+<td align="left">DCA time</td>
+<td align="left">median, mean, sd, n</td>
+<td align="left">Batch</td>
+<td align="left">Flat</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_HO.xlsx</td>
+<td align="left">Handover delay KPIs</td>
+<td align="left">Handover delays</td>
+<td align="left">Handover delays</td>
+<td align="left">HO30+, HO60+, TLAHD, n_ambu</td>
+<td align="left">Batch</td>
+<td align="left">Replication aggregate - mean, sd</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_HO_deciles.xlsx</td>
+<td align="left">Handover delay KPIs</td>
+<td align="left">Handover delays</td>
+<td align="left">Handover delays</td>
+<td align="left">Deciles</td>
+<td align="left">Batch</td>
+<td align="left">Flat</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_JCT.xlsx</td>
+<td align="left">Job cycle time</td>
+<td align="left">JCT</td>
+<td align="left">JCT</td>
+<td align="left">median, mean, sd, n</td>
+<td align="left">Batch</td>
+<td align="left">Flat</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_JCT_conv.xlsx</td>
+<td align="left">Job cycle time</td>
+<td align="left">JCT</td>
+<td align="left">JCT</td>
+<td align="left">median, mean, sd, n</td>
+<td align="left">Batch</td>
+<td align="left">Flat</td>
+<td align="left">nan</td>
+<td align="left">conveyance</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_val_cat.xlsx</td>
+<td align="left">Average time to allocation; time for prehandover; job cycle time; response time, by category</td>
+<td align="left">JCT components</td>
+<td align="left">T_allocate; T_prehandover; T_JCT; T_responsetime</td>
+<td align="left">mean, median</td>
+<td align="left">Batch</td>
+<td align="left">Flat</td>
+<td align="left">nan</td>
+<td align="left">category</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_val_catconv.xlsx</td>
+<td align="left">Average time to allocation; time for prehandover; job cycle time; response time, by category and conveyance</td>
+<td align="left">JCT components</td>
+<td align="left">T_allocate; T_prehandover; T_JCT; T_responsetime</td>
+<td align="left">mean, median</td>
+<td align="left">Batch</td>
+<td align="left">Flat</td>
+<td align="left">nan</td>
+<td align="left">category; conveyance</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_overall_val_conv.xlsx</td>
+<td align="left">Average time to allocation; time for prehandover; job cycle time; response time, by conveyance</td>
+<td align="left">JCT components</td>
+<td align="left">T_allocate; T_prehandover; T_JCT; T_responsetime</td>
+<td align="left">mean, median</td>
+<td align="left">Batch</td>
+<td align="left">Flat</td>
+<td align="left">nan</td>
+<td align="left">conveyance</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_step_CallStack.xlsx</td>
+<td align="left">Call Stack by replication and simulation timestep interval</td>
+<td align="left">Call Stack</td>
+<td align="left">Call Queue</td>
+<td align="left">mean</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">Yes</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_step_HO.xlsx</td>
+<td align="left">Handover delay KPIs by replication and timestep interval</td>
+<td align="left">Handover delays</td>
+<td align="left">Handover delays</td>
+<td align="left">HO30+, HO60+, TLAHD, n_ambu</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">Yes</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_step_RT.xlsx</td>
+<td align="left">Response time KPIs by replication, timestep interval and category</td>
+<td align="left">Response times</td>
+<td align="left">Response times</td>
+<td align="left">median, 90%ile, mean</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">Yes</td>
+<td align="left">category</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPI_step_SiteQueue.xlsx</td>
+<td align="left">Site Queue by replication and simulation timestep interval</td>
+<td align="left">Site queue</td>
+<td align="left">Site Queue</td>
+<td align="left">mean</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">Yes</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIbatch_overall_RT.xlsx</td>
+<td align="left">Overall response time</td>
+<td align="left">Response times</td>
+<td align="left">Response time</td>
+<td align="left">median, 90%ile, mean</td>
+<td align="left">Batch</td>
+<td align="left">Replication aggregate - mean</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIbatch_overall_RTcat.xlsx</td>
+<td align="left">Response time by category</td>
+<td align="left">Response times</td>
+<td align="left">Response time</td>
+<td align="left">median, 90%ile, mean</td>
+<td align="left">Batch</td>
+<td align="left">Replication aggregate - mean, sd</td>
+<td align="left">nan</td>
+<td align="left">category</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIbatch_overall_RU.xlsx</td>
+<td align="left">Resource utilisation</td>
+<td align="left">Resource utilisation</td>
+<td align="left">Utilisation</td>
+<td align="left">Utilisation</td>
+<td align="left">Batch</td>
+<td align="left">Replication aggregate - mean, sd</td>
+<td align="left">nan</td>
+<td align="left">resource type</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Queue</td>
+<td align="left">Queue</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">KPIbatch_overall_val.xlsx</td>
+<td align="left">Batch-level average time to allocation; time for prehandover; job cycle time; response time</td>
+<td align="left">JCT components</td>
+<td align="left">T_allocate; T_prehandover; T_JCT; T_responsetime</td>
+<td align="left">mean, median</td>
+<td align="left">Batch</td>
+<td align="left">Replication aggregate - mean, sd</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIflat_LoS</td>
+<td align="left">Time in department by category</td>
+<td align="left">Time in A&amp;E department</td>
+<td align="left">Time in A&amp;E department</td>
+<td align="left">mean</td>
+<td align="left">Batch</td>
+<td align="left">Flat - mean</td>
+<td align="left">nan</td>
+<td align="left">category</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIbatch_LoS</td>
+<td align="left">Time in department by category by replication</td>
+<td align="left">Time in A&amp;E department</td>
+<td align="left">Time in A&amp;E department</td>
+<td align="left">mean</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">category</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIrep_overall_HO</td>
+<td align="left">Handover delay KPIs by replication</td>
+<td align="left">Handover delays</td>
+<td align="left">Handover delays</td>
+<td align="left">HO30+, HO60+, TLAHD, n_ambu</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIrep_overall_HT</td>
+<td align="left">Overall response time by replication</td>
+<td align="left">Response times</td>
+<td align="left">Response time</td>
+<td align="left">median, 90%ile, mean</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIrep_overall_RT_cat</td>
+<td align="left">Response time by category and replication</td>
+<td align="left">Response times</td>
+<td align="left">Response time</td>
+<td align="left">median, 90%ile, mean</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">category</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">KPIrep_overall_RU</td>
+<td align="left">Resource utilisation by replication</td>
+<td align="left">Resource utilisation</td>
+<td align="left">Utilisation</td>
+<td align="left">Utilisation</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">resource type</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Queue</td>
+<td align="left">Queue</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">KPIrep_overall_val_cat</td>
+<td align="left">Average time to allocation; time for prehandover; job cycle time; response time, by category and replication</td>
+<td align="left">JCT components</td>
+<td align="left">T_allocate; T_prehandover; T_JCT; T_responsetime</td>
+<td align="left">mean, median</td>
+<td align="left">Replication</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">category</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">parameterlistaudit.xlsx</td>
+<td align="left">An Rdata file keeping a log of most parameters (globals, user) used in the model rul</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="left">nan</td>
+<td align="right">nan</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-plot-files">Output - plot files</h2>
+<p>A set of plots related to the KPIs are saved if  <code>flag_saveplots &lt;- TRUE</code> in <code>config.R</code>.</p>
+<p>Some plots may, depending on the nature of the scenario, benefit from different scaling of presentation. When a run ends, all plots are kept in memory as plot objects in a structure called <code>plot_list</code>. These can be further adapted with <code>ggplot</code> as needed, or for instance saved as vector files (<code>.svg</code>) for image processing.</p>
+<p>Alternatively, though we generate these plots for ease, all of them can be generated independently by the user from one of the three full logs.</p>
+<p>An overview of the plots is given below.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Filename</th>
+<th align="left">Description</th>
+<th align="left">Derived via</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">plot_arri_cat_CM</td>
+<td align="left">Arrivals over time, per category and conveyance. Arrivals for walk-ins (99).</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_arri_cat_DnC</td>
+<td align="left">Arrivals over time for three replications and by category. Demand input in black, supply schedule in red.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_HO_bp</td>
+<td align="left">Handover KPIs stepwise over simulation time. Boxplots show variation among replications. Dashed horizontal lines will show reference levels given by user.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_HO_bp_y0</td>
+<td align="left">As 'plot_Kp_HO_bp' but starting at y=0</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_HO_bp_rep</td>
+<td align="left">As 'plot_Kp_HO_bp'  but by replication (up to 3)</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_RT90_bp_d14</td>
+<td align="left">90th percentile of response time by category, in the timestep. Boxplots show variation among replications.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_RT90_bp_d14</td>
+<td align="left">As 'plot_Kp_RT90_bp_d14' but vertically stacked.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_RTmean_bp_d14</td>
+<td align="left">Mean of response time by category, in the timestep. Boxplots show variation among replications.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_Rtmean_bp_ref_freey_d14</td>
+<td align="left">As 'plot_Kp_Rtmean_bp' but vertically stacked. Dashed horizontal lines will show reference levels given by user.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_Kp_Rtmean_bp_ref_freey0_d14</td>
+<td align="left">As 'plot_Kp_Rtmean_bp_ref_freey_d14' but starting at y=0.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">plot_RU_instant_</td>
+<td align="left">Instantaneous utilisation of resources (ambulance, A&amp;E bay). Server capacity as dashed blue line. Server use as full blue line. Queues shown as filled red lines. Multiple traces correspond to multiple replications.</td>
+<td align="left">log of resources</td>
+</tr>
+<tr>
+<td align="left">plot_RU_KPI</td>
+<td align="left">Overall utilisation of resources (ambulance, A&amp;E bay), %</td>
+<td align="left">log of resources</td>
+</tr>
+<tr>
+<td align="left">p_KPI_cq_1</td>
+<td align="left">Average calls queued per time step. Boxplots show variation among replications. Time step as 6 hours.</td>
+<td align="left">log of attributes</td>
+</tr>
+<tr>
+<td align="left">p_KPI_sq_1_day</td>
+<td align="left">Average ambulances queued at ED per time step. Boxplots show variation among replications. Time step as 24 hours.</td>
+<td align="left">log of attributes</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,889 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ambsim.com/inputs/">
+      
+      
+        <link rel="prev" href="../structure/">
+      
+      
+        <link rel="next" href="../config/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>Inputs - AmbSim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AmbSim" class="md-header__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AmbSim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inputs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AmbSim" class="md-nav__button md-logo" aria-label="AmbSim" data-md-component="logo">
+      
+  <img src="../assets/simulation_badge_M.png" alt="logo">
+
+    </a>
+    AmbSim
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem/" class="md-nav__link">
+        Problem Setting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Representative Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Representative Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chosenmethod/" class="md-nav__link">
+        Chosen method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Data Sources (Inputs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        Evidence and Insights (Assumptions)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Optimized Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Optimized Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        Model Build Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../illustrativequestions/" class="md-nav__link">
+        Illustrative questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        Repository Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Inputs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Inputs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-of-inputs-in-the-code" class="md-nav__link">
+    Configuration of inputs in the code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-by-type" class="md-nav__link">
+    Overview by type
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview by type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demand-hourly-schedule" class="md-nav__link">
+    Demand - Hourly Schedule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-category" class="md-nav__link">
+    Demand and Flow - Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-model-of-care" class="md-nav__link">
+    Demand and Flow - Model of Care
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-category_1" class="md-nav__link">
+    Demand and Flow - Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-ed-acuity" class="md-nav__link">
+    Demand and Flow - ED Acuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-cycle-time" class="md-nav__link">
+    Job Cycle Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-hourly-schedule" class="md-nav__link">
+    Supply- Hourly Schedule
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        User Settings (Config)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Solution
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Solution
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          User guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examplerun/" class="md-nav__link">
+        Starting a run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../userguide/" class="md-nav__link">
+        Parameter input files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpretoutput/" class="md-nav__link">
+        Overview of output files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary and reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-of-inputs-in-the-code" class="md-nav__link">
+    Configuration of inputs in the code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-by-type" class="md-nav__link">
+    Overview by type
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview by type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demand-hourly-schedule" class="md-nav__link">
+    Demand - Hourly Schedule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-category" class="md-nav__link">
+    Demand and Flow - Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-model-of-care" class="md-nav__link">
+    Demand and Flow - Model of Care
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-category_1" class="md-nav__link">
+    Demand and Flow - Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-and-flow-ed-acuity" class="md-nav__link">
+    Demand and Flow - ED Acuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-cycle-time" class="md-nav__link">
+    Job Cycle Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-hourly-schedule" class="md-nav__link">
+    Supply- Hourly Schedule
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Inputs</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The core model inputs can be mainly grouped into the following:</p>
+<ul>
+<li>Demand and flow<ul>
+<li>Ambulance demand (t)<ul>
+<li>volume (t)</li>
+<li>by category (t)</li>
+<li>by care model</li>
+<li>by conveyance destination</li>
+</ul>
+</li>
+<li>Direct demand (t)</li>
+</ul>
+</li>
+<li>Supply (t)<ul>
+<li>Ambulance supply (t)</li>
+<li>ED supply (t)</li>
+</ul>
+</li>
+<li>Job Cycle Time components<ul>
+<li>Time to scene</li>
+<li>Time at scene</li>
+<li>Time to site</li>
+<li>Unavoidable pre-handover</li>
+<li>Time to clear</li>
+<li>(nb: Time to Allocate and Time to Pre-handover (Avoidable) are not user inputs, they are emerging outputs from the model given demand and supply)</li>
+</ul>
+</li>
+<li>ED Management<ul>
+<li>ED acuity for Direct ; ambulance category</li>
+<li>ED time in department</li>
+</ul>
+</li>
+</ul>
+<p>The <code>(t)</code> indicates which ones can be given by the user in a time-resolved (hour-by-hour) way.</p>
+<h2 id="configuration-of-inputs-in-the-code">Configuration of inputs in the code</h2>
+<p>While <code>inputs.R</code> is the main script for loading in Input parameter files for model run purposes, this file would typically <strong>not</strong> be updated by an end-user, with all user updates being done in the Input parameter files themselves (within <code>./parameter/__/</code>) and <code>config.R</code>.</p>
+<h2 id="overview-by-type">Overview by type</h2>
+<p>The resulting Inputs for demand, supply, and timings were taken from the identified data sources.
+Below some examples are given (though other options are possible).</p>
+<p>For a more detailed walk-through on the use of Parameter Input Files, see <a href="../userguide/">User guide - Parameter input files</a>.</p>
+<p>For a more detailed walk-through of <code>config.R</code>, see <a href="../config/">User Settings (Config)</a>.</p>
+<h3 id="demand-hourly-schedule">Demand - Hourly Schedule</h3>
+<p>The demand schedule is made up of a dataframe which covers hourly arrivals for:</p>
+<ul>
+<li>Number of ambulance incidents (calculated from hourly and weekday proportions of actual number of incidents from selected geography in selected time period)</li>
+<li>Number of direct ED walk-in demand (calculated from hourly and weekday proportions of uplifted number of incidents by a factor of 1.736)</li>
+</ul>
+<p><img alt="Ambulance and Direct-to-ED Demand over the simulation" src="../assets/Demand.png" /></p>
+<p>Note: other options available, see <a href="../userguide/">User guide - Parameter input files</a>.</p>
+<h3 id="demand-and-flow-category">Demand and Flow - Category</h3>
+<p>When patients are generated as demand in the model, they are assigned a category.
+This can be set as either time-variant or time-invariant.</p>
+<p>Time-variant:</p>
+<ul>
+<li>Proportion of Category1 ambulances (calculated from actual numbers of cat 1 ambulance calls multiplied by hourly profiles)</li>
+<li>Proportion of Category2 ambulances (calculated from actual numbers of cat 2-4 ambulance calls multiplied by hourly profiles and category proportion)</li>
+<li>Proportion of Category3 ambulances (calculated from actual numbers of cat 2-4 ambulance calls multiplied by hourly profiles and category proportion)</li>
+<li>Proportion of Category4 ambulances (calculated from actual numbers of cat 2-4 ambulance calls multiplied by hourly profiles and category proportion)</li>
+</ul>
+<p>Time-invariant:</p>
+<p><img alt="Screenshot of v_demand_cat tab" src="../assets/file_vdemandcat.PNG" /></p>
+<h3 id="demand-and-flow-model-of-care">Demand and Flow - Model of Care</h3>
+<p>Patients are assigned a care model depending on their category.</p>
+<p><img alt="Screenshot of m_demand_cat2conv tab" src="../assets/file_cat2conv.PNG" /></p>
+<h3 id="demand-and-flow-category_1">Demand and Flow - Category</h3>
+<p>Patients needing conveyance are assigned a conveyance destination (ED or non-ED).</p>
+<p><img alt="Screenshot of v_conveydestination tab" src="../assets/file_vconveydestination.PNG" /></p>
+<h3 id="demand-and-flow-ed-acuity">Demand and Flow - ED Acuity</h3>
+<p>Patients are allocated an acuity based on their route to ED and category</p>
+<p><img alt="Screenshot of v_cdirect_acuity tab" src="../assets/file_vdirectacuity.PNG" /></p>
+<h3 id="job-cycle-time">Job Cycle Time</h3>
+<p>The inputs for the Job Cycle Time Components can be chosen as either Quantile-based or Stylistic parametrisation-based.</p>
+<p>The relevant components are:</p>
+<ul>
+<li>Travel to scene</li>
+<li>Time at scene</li>
+<li>Travel to site</li>
+<li>Unavoidable pre-handover</li>
+<li>Time to clear</li>
+<li><em>(pre-handover and time to allocate are emerging queuing model characteristics, not inputs)</em></li>
+</ul>
+<p><img alt="Example input &quot;Time at Scene&quot; JCT component (Quantile-based). For ‘See and Treat’ incidents, divided by categories." src="../assets/input_JCT_tas_st_F2.PNG" />
+Fig. Example input "Time at Scene" JCT component (Quantile-based). For ‘See and Treat’ incidents, divided by categories.</p>
+<p><img alt="Example input &quot;Time at Scene&quot; JCT component (Stylistic-based). For ‘See and Convey’ incidents, divided by categories." src="../assets/input_JCT_tas_sc_F2.PNG" />
+Fig. Example input "Time at Scene" JCT component (Stylistic-based). For ‘See and Convey’ incidents, divided by categories.</p>
+<h3 id="supply-hourly-schedule">Supply- Hourly Schedule</h3>
+<p>The supply schedule is made up of a dataframe which covers hourly resources available for:</p>
+<ul>
+<li>Number of double staffed vehicles (DSV/DSA) (calculated from hourly and weekday proportions of actual number of ambulances available from selected geography in selected time period)</li>
+<li>Relative hourly ED supply (calculated from hourly, weekday and week-on-week relative proportions)</li>
+</ul>
+<p>Note: other options available, see <a href="../userguide/">User guide - Parameter input files</a>.</p>
+<p><img alt="DSV available supply across simulation" src="../assets/AmbSupply.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+    
+  </body>
+</html>
