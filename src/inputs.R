@@ -49,7 +49,7 @@ v_demand_conv <- t(m_demand_cat2conv) %*% v_demand_cat$Rel
 # Define portion of conveyance going to ED (of all conveyances)
 v_conveyED <- tryCatch(
   expr={read.xlsx(paste0(here(),"/parameters/",scenario_folder,"m_demand_cat2conv.xlsx"),sheet="v_conveydestination")},
-  error=function(e){data.frame(Cat=c(1,2,3,4),`perc_toED`=0.9124)}
+  error=function(e){data.frame(Cat=c(1,2,3,4),`perc_toED`=0.93)}
 )
 
 
@@ -60,10 +60,8 @@ v_LoS_ori <- tryCatch(
 )
  
 
-# Define resources arriving per F2F incident
+# Define resources allocated per F2F incident and resources arriving per F2F incident
 v_resarriveperinc <- data.frame(Cat=c(1,2,3,4),`resallocperinc`=c(2,1.43,2,2),`resarriveperinc`=c(1.41,1.05,1.06,1.09))
-#v_resarriveperinc <- data.frame(Cat=c(1,2,3,4),`resallocperinc`=c(2,2,2,2),`resarriveperinc`=c(1.41,1.05,1.06,1.09)) # cat2 w/ 2 res alloc too
-#v_resarriveperinc <- data.frame(Cat=c(1,2,3,4),`resallocperinc`=c(1,1,1,1),`resarriveperinc`=c(1,1,1,1))
 v_resarriveperinc <- v_resarriveperinc %>% mutate(odds2resalloc=pmax(resallocperinc-1,0),
                                                   odds2resarrive = pmax(resarriveperinc-1,0),
                                                   odds2resarrive_given2resalloc=ifelse(odds2resalloc==0,0,odds2resarrive/odds2resalloc))
