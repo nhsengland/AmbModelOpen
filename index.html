@@ -15,7 +15,7 @@
         <link rel="next" href="problem/">
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
@@ -23,7 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.240905d7.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -49,11 +52,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -679,13 +685,13 @@
 
 
 <h1 id="understanding-the-problem">Understanding the Problem</h1>
-<p>This documentation covers the public facing outputs of a discrete event simulation focussing on simulating the ambualnce job cycle time.  The work has been made open to support:</p>
+<p>This documentation covers the public facing outputs of a discrete event simulation focussing on simulating the ambulance job cycle time.  The work has been made open to support:</p>
 <ul>
 <li>Reuse of the code-base by an analyst with access to ambulance data.  In this situation the code should be forked and adapted locally to ingest the trust specific data and trajectory.   We have attempted to include enough information around the parameters and inputs used to allow this refactoring to new data. </li>
-<li>An exmple of using the open R library RSimmer for a healthcare discrete event simulation.  We have tried to include enough information around the approach and considerations to be useful for wider simulations. </li>
+<li>An example of using the open R library RSimmer for a healthcare discrete event simulation.  We have tried to include enough information around the approach and considerations to be useful for wider simulations. </li>
 </ul>
 <h2 id="context-of-the-specific-simulation">Context of the Specific Simulation</h2>
-<p>Ambulance handover problems have been dominating the Urgent &amp; Emergency Care (UEC) space. There are currently large handover delays, with a lot of people waiting a long time to be admitted into the emergency department (ED). </p>
+<p>Ambulance handover problems have been dominating the Urgent &amp; Emergency Care (UEC) space. Over the past couple of years there have been large handover delays, with a lot of people waiting a long time to be admitted into the emergency department (ED). </p>
 <p float="left">
     <img src="./assets/catmedian.png" alt="Source: NHS England Ambulance Quality Indicators: https://www.england.nhs.uk/statistics/statistical-work-areas/ambulance-quality-indicators/" width="49%"/>
     <img src="./assets/handoverw2122.png" alt="Source: NHS England Urgent and Emergency Care Daily Situation Reports: https://www.england.nhs.uk/statistics/statistical-work-areas/uec-sitrep/" width="49%"/>
@@ -714,7 +720,7 @@ It is useful though to better understand the ambulance setting and how different
 </p>
 
 <h2 id="methodological-approach-discrete-event-simulation">Methodological Approach - Discrete Event Simulation</h2>
-<p>As the dynamics to be modelled are flows and resource utilisation, a system model is required.  As we are interested in understanding the profiles tails and not just the medians and expected to include individual effects in the model (e.g. reneging and queue prioritisation depending on individual characteristic) a Discrete Event Simulation (DES) is considered.  This approach models systems as networks of queues and activities, where state changes in the system occur at discrete points embedded in continuous time.  This means that many system events can happen in a single time point, one after another, followed by many time points where no update occurs.  the objects in the system are distinct individuals, each possessing characteristics that determine what happens to that individual, and the activity durations are sampled for each individual from probability distributions.  Discrete Event Simulations are essentially stochastic in nature.  </p>
+<p>As the dynamics to be modelled are flows and resource utilisation, a system model is required.  As we are interested in understanding the profiles tails and not just the medians and expected to include individual effects in the model (e.g. reneging and queue prioritisation depending on individual characteristic) a Discrete Event Simulation (DES) is considered.  This approach models systems as networks of queues and activities, where state changes in the system occur at discrete points embedded in continuous time.  This means that many system events can happen in a single time point, one after another, followed by many time points where no update occurs. The objects in the system are distinct individuals, each possessing characteristics that determine what happens to that individual, and the activity durations are sampled for each individual from probability distributions.  Discrete Event Simulations are essentially stochastic in nature.  </p>
 <p>This method has the advantage of intuitive and visual checks to the logic model, scenario testing and granular modelling.  The restrictions of DES are mainly around the simplified model of the system not picking up dynamic behaviours.  This means that absolute values should not be used for direct comparisons with reality but instead to inform a discussion of the underlying causalities and impacts of changes on the system.</p>
 <p>Discrete event simulations have been widely used for a long time across a variety of industries including queuing logic (e.g. airport customs), assembly lines (e.g. return on investment from prioritising one product line over another), and resource management (e.g. operating theatres).  </p>
 <p>Other techniques that could be considered for this work are: queuing theory; Markov chains; process mapping; or system dynamics.</p>
@@ -774,7 +780,7 @@ It is useful though to better understand the ambulance setting and how different
     <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="assets/javascripts/bundle.19047be9.min.js"></script>
       
     
   </body>

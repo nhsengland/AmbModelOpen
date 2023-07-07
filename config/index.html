@@ -17,7 +17,7 @@
         <link rel="next" href="../validation/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
@@ -25,7 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.240905d7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -51,11 +54,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -836,7 +842,7 @@
 <td align="center"># days of study (warm-up + observe), only used if demand not from file</td>
 </tr>
 <tr>
-<td align="center">g.tmax=24<em>60</em>ndays;</td>
+<td align="center">g.tmax=24<em> 60 </em>ndays;</td>
 <td align="center"></td>
 <td align="center"># one day . Note: this may be different to implied by schedules.</td>
 </tr>
@@ -947,7 +953,7 @@
 <td align="center"># whether LoS should come from file.</td>
 </tr>
 <tr>
-<td align="center">T_AE &lt;- 5.96</td>
+<td align="center">T_AE &lt;- 6.5</td>
 <td align="center"></td>
 <td align="center"># period in AE (used if not loaded from file) , in hours</td>
 </tr>
@@ -957,7 +963,7 @@
 <td align="center"># number of A&amp;E bays / A&amp;E capacity</td>
 </tr>
 <tr>
-<td align="center">t_AEsupplyshock &lt;- 7<em>24</em>60</td>
+<td align="center">t_AEsupplyshock &lt;- 7<em> 24 </em>60</td>
 <td align="center"></td>
 <td align="center"># when to apply supply shock, in minutes from t0</td>
 </tr>
@@ -979,12 +985,12 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">tamper_dsa_flag &lt;- TRUE</td>
+<td align="center">tamper_dsa_flag &lt;- FASE</td>
 <td align="center"></td>
 <td align="center"># whether to tamper with DSA supply</td>
 </tr>
 <tr>
-<td align="center">tamper_dsa_f &lt;- 0.861</td>
+<td align="center">tamper_dsa_f &lt;- 1</td>
 <td align="center"></td>
 <td align="center"># factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)</td>
 </tr>
@@ -1108,7 +1114,7 @@
 <tr>
 <td align="center">nqueue_balk &lt;- 500</td>
 <td align="center"></td>
-<td align="center"># threshold of queue size. (#500 as WMAS saw a peak of circa 470 on unallocated calls across the day by month, in Dec22)</td>
+<td align="center"># threshold of queue size from whick balking occurs</td>
 </tr>
 <tr>
 <td align="center"></td>
@@ -1190,7 +1196,7 @@
 <td align="center"># whether to use scenario runs . Do not edit the below if under the 'else' statement (single scenario)</td>
 </tr>
 <tr>
-<td align="center">vec_T_AE = c(5.96)</td>
+<td align="center">vec_T_AE = c(T_AE)</td>
 <td align="center"></td>
 <td align="center"># vector for time in A&amp;E (hours)</td>
 </tr>
@@ -1200,7 +1206,7 @@
 <td align="center"># vector for DSA flag</td>
 </tr>
 <tr>
-<td align="center">vec_tamper_dsa_f = c(0.82)</td>
+<td align="center">vec_tamper_dsa_f = c(1)</td>
 <td align="center"></td>
 <td align="center"># vector for DSA factor</td>
 </tr>
@@ -1330,7 +1336,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../assets/javascripts/bundle.19047be9.min.js"></script>
       
     
   </body>
