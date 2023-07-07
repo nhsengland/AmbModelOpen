@@ -1,13 +1,13 @@
 # Understanding the Problem
 
-This documentation covers the public facing outputs of a discrete event simulation focussing on simulating the ambualnce job cycle time.  The work has been made open to support:
+This documentation covers the public facing outputs of a discrete event simulation focussing on simulating the ambulance job cycle time.  The work has been made open to support:
 
 - Reuse of the code-base by an analyst with access to ambulance data.  In this situation the code should be forked and adapted locally to ingest the trust specific data and trajectory.   We have attempted to include enough information around the parameters and inputs used to allow this refactoring to new data. 
-- An exmple of using the open R library RSimmer for a healthcare discrete event simulation.  We have tried to include enough information around the approach and considerations to be useful for wider simulations. 
+- An example of using the open R library RSimmer for a healthcare discrete event simulation.  We have tried to include enough information around the approach and considerations to be useful for wider simulations. 
 
 ## Context of the Specific Simulation
 
-Ambulance handover problems have been dominating the Urgent & Emergency Care (UEC) space. There are currently large handover delays, with a lot of people waiting a long time to be admitted into the emergency department (ED). 
+Ambulance handover problems have been dominating the Urgent & Emergency Care (UEC) space. Over the past couple of years there have been large handover delays, with a lot of people waiting a long time to be admitted into the emergency department (ED). 
 
 <p float="left">
     <img src="./assets/catmedian.png" alt="Source: NHS England Ambulance Quality Indicators: https://www.england.nhs.uk/statistics/statistical-work-areas/ambulance-quality-indicators/" width="49%"/>
@@ -43,7 +43,7 @@ An overview of the response time problem restated as a queue is given below. Que
 
 ## Methodological Approach - Discrete Event Simulation
 
-As the dynamics to be modelled are flows and resource utilisation, a system model is required.  As we are interested in understanding the profiles tails and not just the medians and expected to include individual effects in the model (e.g. reneging and queue prioritisation depending on individual characteristic) a Discrete Event Simulation (DES) is considered.  This approach models systems as networks of queues and activities, where state changes in the system occur at discrete points embedded in continuous time.  This means that many system events can happen in a single time point, one after another, followed by many time points where no update occurs.  the objects in the system are distinct individuals, each possessing characteristics that determine what happens to that individual, and the activity durations are sampled for each individual from probability distributions.  Discrete Event Simulations are essentially stochastic in nature.  
+As the dynamics to be modelled are flows and resource utilisation, a system model is required.  As we are interested in understanding the profiles tails and not just the medians and expected to include individual effects in the model (e.g. reneging and queue prioritisation depending on individual characteristic) a Discrete Event Simulation (DES) is considered.  This approach models systems as networks of queues and activities, where state changes in the system occur at discrete points embedded in continuous time.  This means that many system events can happen in a single time point, one after another, followed by many time points where no update occurs. The objects in the system are distinct individuals, each possessing characteristics that determine what happens to that individual, and the activity durations are sampled for each individual from probability distributions.  Discrete Event Simulations are essentially stochastic in nature.  
 
 This method has the advantage of intuitive and visual checks to the logic model, scenario testing and granular modelling.  The restrictions of DES are mainly around the simplified model of the system not picking up dynamic behaviours.  This means that absolute values should not be used for direct comparisons with reality but instead to inform a discussion of the underlying causalities and impacts of changes on the system.
 

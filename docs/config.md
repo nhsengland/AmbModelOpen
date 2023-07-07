@@ -24,7 +24,7 @@ The below shows these parameters with a default assignment but this can be chang
 | n_days_warm <- 1                    |   | # days of warm-up , if demand not from file, only used to dictate time to remove for output KPI purposes.                                 |
 | n_days_study <- 14                  |   | # days to observe , only used if demand not from file                                                                                     |
 | ndays <- n_days_warm + n_days_study |   | # days of study (warm-up + observe), only used if demand not from file                                                                    |
-| g.tmax=24*60*ndays;                 |   | # one day . Note: this may be different to implied by schedules.                                                                          |
+| g.tmax=24* 60 *ndays;                 |   | # one day . Note: this may be different to implied by schedules.                                                                          |
 
 #### Fallback simulation parameters (only used if JCT error in loading from file, except g.T_prehandoverXed and g.T_allocatetomobilise)
 
@@ -54,17 +54,17 @@ The below shows these parameters with a default assignment but this can be chang
 |:---:|:---:|:---:|
 | flag_supply_schedule_file_hED <- TRUE |  |  # whether to use (unscaled) seasonal ED variation from Dnc file. If so, n_AEbays will be used as average A&E bays over time horizon  |
 | flag_LoS_file <- FALSE |  | # whether LoS should come from file.   |
-| T_AE <- 5.96 |  | # period in AE (used if not loaded from file) , in hours  |
+| T_AE <- 6.5 |  | # period in AE (used if not loaded from file) , in hours  |
 | n_AEbays <- 1500*1 |  | # number of A&E bays / A&E capacity  |
-| t_AEsupplyshock <- 7*24*60 |  | # when to apply supply shock, in minutes from t0  |
+| t_AEsupplyshock <- 7* 24 *60 |  | # when to apply supply shock, in minutes from t0  |
 | dn_AEsupplyshock <- 0 |  | # number of bays to change by, upon shock (for decrease, use negative number) 
 
 #### What-if parameters
 
 | Parameter           |   | Use                          |
 |:---:|:---:|:---:|
-| tamper_dsa_flag <- TRUE |  | # whether to tamper with DSA supply  |
-| tamper_dsa_f <- 0.861 |  | # factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)  |
+| tamper_dsa_flag <- FASE |  | # whether to tamper with DSA supply  |
+| tamper_dsa_f <- 1 |  | # factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)  |
 | tamper_HO_flag <- FALSE |  | # whether to tamper with handover  |
 | tamper_HO_f <-1 |  | # factor by which to tamper by (1 is 'equal' / no tampering ; 1.10 and 0.9 are tampering upwards and downwards by 10%)  |
 | tamper_HT_flag <- FALSE |  | # whether to 'tamper' with H&T (F2F portion)  |
@@ -91,7 +91,7 @@ The below shows these parameters with a default assignment but this can be chang
 | catmin_stepcat <- 3 |  | # minimum category for which this should apply (towards lower acuities)  |
 |  |  |   |
 | flag_balk_amb <- FALSE |  | # whether to allow balking. If FALSE, nqueue_balk will be overwritten to 'Inf'  |
-| nqueue_balk <- 500 |  | # threshold of queue size. (#500 as WMAS saw a peak of circa 470 on unallocated calls across the day by month, in Dec22)  |
+| nqueue_balk <- 500 |  | # threshold of queue size from whick balking occurs  |
 |  |  |   |
 | no_ambulancesqueueingbreach <- 10 |  | # no ambulances queueing in site for it to count as breach from new ambulance arrival perspective  |
 | no_arrivalbreaches <- 10 |  | # trigger point: nr of arrivals in time window that observe queue length breach.  |
@@ -114,9 +114,9 @@ The below shows these parameters with a default assignment but this can be chang
 | Parameter           |   | Use                          |
 |:---:|:---:|:---:|
 | flag_scenarios <- TRUE |  | # whether to use scenario runs . Do not edit the below if under the 'else' statement (single scenario)  |
-| vec_T_AE = c(5.96) |  | # vector for time in A&E (hours)  |
+| vec_T_AE = c(T_AE) |  | # vector for time in A&E (hours)  |
 |   vec_tamper_dsa_flag=c(TRUE) |  | # vector for DSA flag  |
-|   vec_tamper_dsa_f = c(0.82) |  | # vector for DSA factor  |
+|   vec_tamper_dsa_f = c(1) |  | # vector for DSA factor  |
 |   vec_tamper_HT_flag = c(FALSE) |  | # vector for H&T flag  |
 |   vec_tamper_HT_pp = c(0) |  | # vector for H&T p.p. change  |
 |   vec_tamper_ST_flag = c(FALSE) |  | # vector for S&T flag  |

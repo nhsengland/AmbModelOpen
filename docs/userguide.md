@@ -119,7 +119,7 @@ Header meaning:
 - uph - unavoidable pre-handover (defining the minimum handover, independent and on top of that emerging from the model's handover ED resource request)
 - ttc - time to clear
 
-![Screenshot of JCT_v_type.xlsx](../assets/file_JCTvtype.PNG)
+![Screenshot of JCT_v_type.xlsx](../assets/file_JCTvtype.png)
 
 ## Input file 'JCT_m_q.xlsx'
 
@@ -185,7 +185,7 @@ Header meaning:
 - **Suggested sources**: JCT components informed by CADS / ADS ; model ambulance in model health system; judgemental.
 - **Run use**: will be used and MUST be defined _if_ 'Style' selected in `JCT_m_type.xlsx`.
 
-![Screenshot of JCT_m_style.xlsx, sheet traveltoscene](../assets/file_JCTmstyle.PNG)
+![Screenshot of JCT_m_style.xlsx, sheet traveltoscene](../assets/file_JCTmstyle.png)
 
 
 ## Input file 'v_DnC_schedule.xlsx'
@@ -214,7 +214,7 @@ Largely, this sheets controls how `Demand-Enforced` and `Supply-Enforced` should
 - **Controls - Supply**
     - - _Which profile: ' As_components' vs 'Fully custom'_ : choose whether RSV and ED supply should come from sheet `Supply - As_components` or from `Supply - Fully_custom`
 
-![Screenshot of v_DnC_schedule.xlsx, sheet Controls](../assets/file_dnc_controls.PNG)
+![Screenshot of v_DnC_schedule.xlsx, sheet Controls](../assets/file_dnc_controls.png)
 
 ### Sheet `Demand-Enforced`
 
