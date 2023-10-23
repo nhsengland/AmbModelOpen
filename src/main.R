@@ -19,8 +19,8 @@ gc() # garbage collection to take place
 set.seed(995)
 
 # Specify desired (existing) scenario folder and  output directory (USER SETTINGS) ----------------------------------
-scenario_folder <- "Fake_Data_2" # existing scenario folder to use (in AmbModelOpen/parameters)
-mydate = "Fake_Scenario2_01" # specify name of (new) folder that should contain Outputs (will appear in AmbModelOpen/Outputs)
+scenario_folder <- "Fake_Data_1A" # existing scenario folder to use (in AmbModelOpen/parameters)
+mydate = "Fake_Scenario1A_Oct23" # specify name of (new) folder that should contain Outputs (will appear in AmbModelOpen/Outputs)
 
 # Source libraries -------------------------------------------------------------
 source(here::here("src","packages.R"))
