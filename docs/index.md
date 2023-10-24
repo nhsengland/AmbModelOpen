@@ -51,6 +51,9 @@ Discrete event simulations have been widely used for a long time across a variet
 
 Other techniques that could be considered for this work are: queuing theory; Markov chains; process mapping; or system dynamics.
 
+<iframe src="../assets/Fake_Scenario_1A/map-anim_all_absolute_crep1id1_2023-10-20_self.html" width="800" height="400"></iframe>
+(Full screen [here](../assets/Fake_Scenario_1A/map-anim_all_absolute_crep1id1_2023-10-20_self.html).)
+
 ## Model Design
 
 A successful system model needs to have:

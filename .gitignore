@@ -1,6 +1,14 @@
 Output
+src_viz
 src/Output
 src/Output/
+example_outputs/**/*.css
+example_outputs/**/*.js
+example_outputs/**/*.html
+example_outputs/**/LICENSE
+docs/**/*.css
+docs/**/*.js
+docs/**/LICENSE
 
 *.state
 *.pickle

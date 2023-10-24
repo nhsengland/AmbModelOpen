@@ -41,11 +41,11 @@ n_mobile0 <- min(floor(n_ru0/2),n_dsav0)
 
 ## Set A&E parameters
 flag_supply_schedule_file_hED <- TRUE # whether to use (unscaled) seasonal ED variation from Dnc file. If so, n_AEbays will be used as average A&E bays over time horizon
-flag_LoS_file <- FALSE                   # whether LoS should come from file. 
+flag_LoS_file <- TRUE                   # whether LoS should come from file. 
 T_AE <- 6.5                           # period in AE (used if not loaded from file) , in hours
-n_AEbays <- 1500*1#                    # FAKE INPUT # number of A&E bays / A&E capacity
+n_AEbays <- 73*1# 1500*1                   # FAKE INPUT # number of A&E bays / A&E capacity
 t_AEsupplyshock <- 7*24*60             # when to apply supply shock, in minutes from t0
-dn_AEsupplyshock <- 0                  # number of bays to change by, upon shock (for decrease, use negative number)
+dn_AEsupplyshock <- -8                  # number of bays to change by, upon shock (for decrease, use negative number)
 
 # What-if parameters -------------------------------------------------
 tamper_dsa_flag <- FALSE              # whether to tamper with DSA supply
@@ -129,7 +129,7 @@ val_month = val_months[1]               # change between 1,2,3 for some referenc
 # Saving parameters ------------------------------------------------------------
 flag_savedata_overallKPIs = T     # flag on whether to save overall KPI files
 flag_savedata_stepwiseKPIs = T    # flag on whether to save stepwise KPI files
-flag_savedata_fulllogs = F        # flag on whether to save full logs
+flag_savedata_fulllogs = T        # flag on whether to save full logs
 flag_saveplots =  T               # flag on whether to save plots
 flag_patientpathplot = F          # plot(trajectory)
 g.debug=0                         # how many levels of depth of log detail to print. #0 for least.

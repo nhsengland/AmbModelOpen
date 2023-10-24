@@ -98,10 +98,10 @@ The relevant components are:
 - _(pre-handover and time to allocate are emerging queuing model characteristics, not inputs)_
 
 
-![Example input "Time at Scene" JCT component (Quantile-based). For ‘See and Treat’ incidents, divided by categories.](../assets/input_JCT_tas_st_F2.PNG)
+![Example input "Time at Scene" JCT component (Quantile-based). For ‘See and Treat’ incidents, divided by categories.](../assets/input_JCT_tas_st_F2.png)
 Fig. Example input "Time at Scene" JCT component (Quantile-based). For ‘See and Treat’ incidents, divided by categories.
 
-![Example input "Time at Scene" JCT component (Stylistic-based). For ‘See and Convey’ incidents, divided by categories.](../assets/input_JCT_tas_sc_F2.PNG)
+![Example input "Time at Scene" JCT component (Stylistic-based). For ‘See and Convey’ incidents, divided by categories.](../assets/input_JCT_tas_sc_F2.png)
 Fig. Example input "Time at Scene" JCT component (Stylistic-based). For ‘See and Convey’ incidents, divided by categories.
 
 ### Supply- Hourly Schedule
