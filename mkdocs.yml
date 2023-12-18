@@ -1,5 +1,7 @@
 site_name: AmbSim
 site_url: https://ambsim.com/
+repo_url: https://github.com/nhsengland/AmbModelOpen
+repo_name: nhsengland/AmbModelOpen
 nav:
   - Home: index.md
   - Problem Setting: problem.md
@@ -25,5 +27,10 @@ nav:
 theme: 
   name: material
   logo: assets/simulation_badge_M.png
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    - search.suggest
 plugins:
     - table-reader
+    - search

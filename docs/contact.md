@@ -1,3 +1,3 @@
-This work was undertaken during early 2023 by colleagues within the [digital analysis and research team (DART)](https://transform.england.nhs.uk/key-tools-and-info/nhsx-analytics-unit/) in the Transformation Directorate of NHS England.
+This work was undertaken during early 2023 by colleagues within the [Digital Analytics and Research team (DART)](https://transform.england.nhs.uk/key-tools-and-info/nhsx-analytics-unit/) in the Transformation Directorate of NHS England.
 
-See our other open projects [here](https://nhsx.github.io/AnalyticsUnit/projects.html) or get in contact by emailing england.tdau@nhs.net
+See other open projects from the wider NHSE Data Science community [here](https://nhsengland.github.io/DataScience-Signpost/) or get in contact by emailing datascience@nhs.net.
