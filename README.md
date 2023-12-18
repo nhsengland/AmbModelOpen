@@ -19,7 +19,7 @@ This repository holds code for AmbModelOpen: A discrete event simulation of ambu
         -  `pip install mkdocs-material`
         -  extension for reading xls tables: `pip install mkdocs-table-reader-plugin` ; `pip install openpyxl`
     - Type `mkdocs serve`
-    - This will provide a locally hosted html link of the sort http://xxx.x.x:8000/ . Copy and open in browser.
+    - This will provide a locally hosted html link of the sort `http://xxx.x.x:8000/` . Copy and open in browser.
     - The install steps can be skipped in further loads
 
 ### Built With
@@ -77,6 +77,6 @@ of the [Open Government 3.0][ogl] licence.
 [ogl]: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 
 ### Contact
-To find out more about the [DART](https://www.nhsx.nhs.uk/key-tools-and-info/nhsx-analytics-unit/) visit our [project website](https://nhsx.github.io/AnalyticsUnit/projects.html) or get in touch at [TDAUgroup@england.nhs.uk](mailto:TDAUgroup@england.nhs.uk).
+To find out more about [DART](https://www.nhsx.nhs.uk/key-tools-and-info/nhsx-analytics-unit/) and Data Science at NHS England visit the [Data Science Signposting Website](https://nhsengland.github.io/DataScience-Signpost/) or get in touch at [datascience@nhs.net](mailto:datascience@nhs.net).
 
 <!-- ### Acknowledgements -->
