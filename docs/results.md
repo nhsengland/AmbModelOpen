@@ -52,6 +52,7 @@ Outputs can be seen in `example_outputs/Fake_Scenario2_1`.
 
 [Week 2 (ongoing disruption) - mean time](../assets/Fake_Scenario_1A/map-week2all_meanrep1id1_2023-10-23.html)
 
+
 #### Pathway animated - first week (before disruption)
 
 This animation only relates to days 1-7, so before step disruption. Calendar dates are fictitious. Colours relate to care model.
@@ -91,8 +92,8 @@ Outputs can be seen in `example_outputs/Fake_Scenario2_1`.
 
 #### Instantaneous utilisation, capacity and queue traces
 
-**Figure** Instantaneous resource usage for respectively ambulance and A&E bay. Dashed blue - server capacity ; Solid blue traces - server use ; Solid red traces - queues . Multiple traces due to n=10 rpelications.
-![Instananeous utilisation for Fake_Data_2.](../assets/Fake_Scenario_2/plot_RU_instant_.PNG)
+**Figure** Instantaneous resource usage for respectively ambulance and A&E bay. Dashed blue - server capacity ; Solid blue traces - server use ; Solid red traces - queues . Multiple traces due to n=10 replications.
+![Instananeous utilisation for Fake_Data_2.](../assets/Fake_Scenario_2/plot_RU_instant_.png)
 
 #### Utilisation KPIs - batch, overall simulation time
 

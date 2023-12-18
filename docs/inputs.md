@@ -45,7 +45,7 @@ The demand schedule is made up of a dataframe which covers hourly arrivals for:
 - Number of ambulance incidents (calculated from hourly and weekday proportions of actual number of incidents from selected geography in selected time period)
 - Number of direct ED walk-in demand (calculated from hourly and weekday proportions of uplifted number of incidents by a factor of 1.736)
 
-![Ambulance and Direct-to-ED Demand over the simulation](../assets/Demand.png)
+![Ambulance and Direct-to-ED Demand over the simulation](../assets/demand.png)
 
 Note: other options available, see [User guide - Parameter input files](userguide.md).
 
