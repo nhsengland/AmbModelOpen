@@ -5,13 +5,13 @@
 
 [![status: experimental](https://github.com/GIScience/badges/raw/master/status/experimental.svg)](https://github.com/GIScience/badges#experimental)
 
-This repository holds code for AmbModelOpen: A discrete event simulation of ambulance resources.  The methodological approach and project specifics can be seen in the [MkDocs documentation](nhsengland.github.io/AmbModelOpen/).  
+This repository holds code for AmbModelOpen: A discrete event simulation of ambulance resources.  The methodological approach and project specifics can be seen in the [MkDocs documentation](https://nhsengland.github.io/AmbModelOpen/).  
 
 ### Project Stucture
 
 - The main code is found in the src folder
 - More information about the code usage can be found in the [model card](./model_card.md)
-- Documentation is created by MkDocs (publicly hosted at [https://nhsengland.github.io/AmbModelOpen/](nhsengland.github.io/AmbModelOpen/)) or can be locally loaded as follows
+- Documentation is created by MkDocs (publicly hosted at [nhsengland.github.io/AmbModelOpen/](https://nhsengland.github.io/AmbModelOpen/)) or can be locally loaded as follows
     - Open Anaconda Prompt
     - Navigate to main repository folder (local) with `cd {my_relative_path/.../AmbModel}`
     - Install mkdocs `pip install mkdocs`
