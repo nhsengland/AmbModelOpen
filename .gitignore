@@ -1,5 +1,4 @@
 Output
-src_viz
 src/Output
 src/Output/
 example_outputs/**/*.css
@@ -13,6 +12,7 @@ docs/**/LICENSE
 *.state
 *.pickle
 *.dcm
+.Rhistory
 
 # Created by https://www.toptal.com/developers/gitignore/api/vim,venv,pydev,linux,macos,flask,dotenv,django,direnv,python,windows,virtualenv,pycharm+all,visualstudio,jupyternotebooks,visualstudiocode,data
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,venv,pydev,linux,macos,flask,dotenv,django,direnv,python,windows,virtualenv,pycharm+all,visualstudio,jupyternotebooks,visualstudiocode,data

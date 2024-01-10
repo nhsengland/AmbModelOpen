@@ -5,13 +5,13 @@
 
 [![status: experimental](https://github.com/GIScience/badges/raw/master/status/experimental.svg)](https://github.com/GIScience/badges#experimental)
 
-This repository holds code for AmbModelOpen: A discrete event simulation of ambulance resources.  The methodological approach and project specifics can be seen in the MkDocs documentation.  
+This repository holds code for AmbModelOpen: A discrete event simulation of ambulance resources.  The methodological approach and project specifics can be seen in the [MkDocs documentation](nhsengland.github.io/AmbModelOpen/).  
 
 ### Project Stucture
 
 - The main code is found in the src folder
 - More information about the code usage can be found in the [model card](./model_card.md)
-- Documentation is created by MkDocs and can be locally loaded as follows
+- Documentation is created by MkDocs (publicly hosted at [https://nhsengland.github.io/AmbModelOpen/](nhsengland.github.io/AmbModelOpen/)) or can be locally loaded as follows
     - Open Anaconda Prompt
     - Navigate to main repository folder (local) with `cd {my_relative_path/.../AmbModel}`
     - Install mkdocs `pip install mkdocs`
@@ -44,7 +44,10 @@ The required packages are stored in `src/packages.R`.
 ### Usage
 RSimmer generates entities to follow set trajectories.  The entities in this case are patients requiring emergency transport to an emergency department whilst the trajectory covers the ambulance allocation, transportation and handover to the emergency department.  Both generator and trajectory are defined in `src/trajectories`.  The trajectory can be viewed using the library simmer.plot and the command `plot(patient)` if the trajectory is run outside of it's funtion. 
 
-The main run of the model is controlled by `main.R` which defines the simulation configuration and any static or scenario input parameters.  The model can be run over a grid of scenarios for `nreps` number of replications. Post processing visualisations and saving of outputs then finishes the run with outputs saved to the `Output` folder (gitignored).  Example outputs can be found in the `example_output` folder.
+The main run of the model is controlled by `main.R` which defines the simulation configuration and any static or scenario input parameters.  The model can be run over a grid of scenarios for `nreps` number of replications.
+
+Post processing visualisations and saving of outputs then finishes the run with outputs saved to the `Output` folder (gitignored).  Example outputs can be found in the `example_output` folder.
+The folder `src_processminingviz` includes an additional script that uses process mining package `bupaR` to enable visualisation of the event logs created, including some key metrics.
 
 #### Datasets
 The main data sources used in this work are the Computer Aided Dispatch (CAD) System to inform job cycle times of ambulances and a linkage with the Emergency Care Data Set (ECDS) to address handover.  
