@@ -3,7 +3,7 @@
 
 ## Model Details
 
-The implementation of the Amb-Model-Open within this repository is the public facing version realting to a piece of work conducted in NHS England from Feb-May 2023. This model card describes the updated version of the model, released 20-June-2023.  The model itself is a discrete event simulation using a trajectory to define possible routes.
+The implementation of the Amb-Model-Open within this repository is the public facing version relating to a piece of work conducted in NHS England from Feb-May 2023. This model card describes the updated version of the model, released 20-June-2023.  The model itself is a discrete event simulation using a trajectory to define possible routes.
 
 ## Model Use
 
